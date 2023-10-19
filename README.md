@@ -22,7 +22,7 @@ https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/images/recipe-reco
 <!-- [![Running Code Coverage](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml) -->
 
 [![Style Checker and Prettify Code](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
-[![Greetings](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/greetings.yml/badge.svg)]https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/greetings.yml)
+[![Greetings](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/greetings.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/greetings.yml)
 ![Lines of code](https://img.shields.io/badge/Lines%20of%20Code-123.5k-green)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/thosaniparth/Recipe_Recommender)
 
