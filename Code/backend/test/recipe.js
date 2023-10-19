@@ -1,7 +1,7 @@
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const { app } = require("../app");
-const Recipe = require("../models/recipe")
+const Recipe = require("../models/recipe");
 
 chai.use(chaiHttp);
 chai.should();
@@ -25,7 +25,7 @@ describe("Post Recipes Route", () => {
         if (err) {
           console.log("Yeh hai Error", err);
         }
-        await Recipe.deleteMany({TranslatedRecipeName: "Testing Recipe"})
+        await Recipe.deleteMany({ TranslatedRecipeName: "Testing Recipe" });
         res.should.have.status(201);
         done();
       });
