@@ -1,6 +1,7 @@
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const { app } = require("../app");
+const Recipe = require("../models/recipe")
 
 chai.use(chaiHttp);
 chai.should();
@@ -20,10 +21,11 @@ describe("Post Recipes Route", () => {
         recipe_instructions:
           "Check documentation for testing examples and implementations.",
       })
-      .end((err, res) => {
+      .end(async (err, res) => {
         if (err) {
           console.log("Yeh hai Error", err);
         }
+        await Recipe.deleteMany({TranslatedRecipeName: "Testing Recipe"})
         res.should.have.status(201);
         done();
       });
