@@ -8,23 +8,20 @@ https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/images/recipe-reco
 
 [![Made With](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
 [![DOI](https://zenodo.org/badge/429944963.svg)](https://zenodo.org/badge/latestdoi/429944963)
-[![GitHub issues open](https://img.shields.io/github/issues/thosaniparth/Recipe_Recommender)](https://github.com/thosaniparth/Recipe_Recommender/issues)
-[![GitHub stars](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)
-![Github closes issues](https://img.shields.io/github/issues-closed-raw/thosaniparth/Recipe_Recommender)
-[![Build Status](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender)
-[![codecov](https://codecov.io/gh/thosaniparth/Recipe_Recommender/branch/master/graph/badge.svg?token=M48I2E3PLL)](https://codecov.io/gh/thosaniparth/Recipe_Recommender)
-[![Respost - Write comment to new Issue event](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Respost.yml)
-[![Check the source code](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/codeFormatter.yml)
-![GitHub contributors](https://img.shields.io/github/contributors/thosaniparth/Recipe_Recommender)
-[![Close as a feature](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/close_as_a_feature.yml)
-[![Code Formatter and Syntax Check](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
-
-<!-- [![Running Code Coverage](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml) -->
-
-[![Style Checker and Prettify Code](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
+[![GitHub issues open](https://img.shields.io/github/issues/Shubh-Nisar/Recipe_Recommender)](https://github.com/Shubh-Nisar/Recipe_Recommender/issues)
+[![GitHub stars](https://badgen.net/github/stars/Shubh-Nisar/Recipe_Recommender)](https://badgen.net/github/stars/Shubh-Nisar/Recipe_Recommender)
+![Github closes issues](https://img.shields.io/github/issues-closed-raw/Shubh-Nisar/Recipe_Recommender)
+[![Build Status](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/coverage.yml)
+[![codecov](https://codecov.io/gh/Shubh-Nisar/Recipe_Recommender/branch/master/graph/badge.svg?token=f9c0cfdb-7222-453e-a957-a52002edbeef)](https://codecov.io/gh/Shubh-Nisar/Recipe_Recommender)
+[![Respost - Write comment to new Issue event](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Respost.yml)
+[![Check the source code](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/codeFormatter.yml)
+![GitHub contributors](https://img.shields.io/github/contributors/Shubh-Nisar/Recipe_Recommender)
+[![Close as a feature](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/close_as_a_feature.yml)
+[![Code Formatter and Syntax Check](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
+[![Style Checker and Prettify Code](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
 [![Greetings](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/greetings.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/greetings.yml)
 ![Lines of code](https://img.shields.io/badge/Lines%20of%20Code-123.5k-green)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/thosaniparth/Recipe_Recommender)
+![GitHub code size in bytes](https://img.shields.io/badge/Code%20Size-27,365KB-brightgreen)
 
 https://user-images.githubusercontent.com/25223347/140403709-a062e7c5-4500-49d4-9758-aea9e5fa5442.mp4
 
