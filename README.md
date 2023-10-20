@@ -41,8 +41,6 @@ Recipe Recommender is a website that suggests users simple food recipes based on
 - [ ] For each recipe, we show the key ingredients, instructions and a sample image.
 - [ ] Upon user request we also send the list of recipes to the user.
 
-Source documentation can be found at: [Recipe Recommender Docs] https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/Docs/Recipe%20Recommender%20Source%20Documentation%20-%20Google%20Docs.pdf
-
 ## Technology Stack
 
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
