@@ -1,6 +1,6 @@
 name: Running Code Coverage
 
-on: 
+on:
   pull_request:
     branches: ["master"]
   push:
@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,28 +15,27 @@ jobs:
         node-version: [18.x]
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 2 
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
-    - name: Set up Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: |
+      - name: Install dependencies
+        run: |
           cd Code/backend
           npm install
 
-    - name: Run the tests
-      run: |
+      - name: Run the tests
+        run: |
           cd Code/backend
           npm test -- --coverage
 
-          
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
-      with:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
