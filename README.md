@@ -288,8 +288,6 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - [x] Leveraged React hooks and arrow functions for improved code readability.
 - [x] Utilized styled-components for styling the user interface.
 
-Regenerate
-
 ## Scope of improvement:
 
 - [ ] Add more filters and also recommend restaurants to users based on their inputs.
