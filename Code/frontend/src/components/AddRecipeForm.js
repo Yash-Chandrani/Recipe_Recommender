@@ -36,6 +36,7 @@ class Form extends Component {
     dict["recipe_time"] = document.getElementById("recipe_time").value;
     dict["recipe_url"] = document.getElementById("recipe_url").value;
     dict["recipe_budget"] = document.getElementById("recipe_budget").value;
+    dict["food_pref"] = document.getElementById("food_pref").value;
     console.log(dict);
 
     let all_val_filled = [];
@@ -166,6 +167,26 @@ class Form extends Component {
               </div>
             </div>
           </div>
+
+          <div className="row pb-1">
+            <div className="input-group col-lg-4 bg-danger flexer">
+              <label className="sideLabel"> Recipe Time: </label>
+              <div className="input-group-append" style={{ width: "66%" }}>
+                <select
+                  name="time_to_cook"
+                  id="food_pref"
+                  className="form-input"
+                  style={{ width: "100%" }}
+                >
+                  <option value="Vegetarian">Vegetarian</option>
+                  <option value="Non-Vegetarian">Non-Vegetarian</option>
+                  <option value="Vegan">Vegan</option>
+                </select>
+                {/* <input type="text" id="recipe_time" /> */}
+              </div>
+            </div>
+          </div>
+
           <div className="row pb-1">
             <div className="input-group col-lg-4 bg-danger flexer">
               <label className="sideLabel"> Recipe URL: </label> <br />

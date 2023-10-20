@@ -110,15 +110,12 @@ class Form extends Component {
   searchRecipe = async () => {
     const budget = document.getElementById("budget").value;
     const time = document.getElementById("time_to_cook").value;
-
-    if (isNaN(time) || time <= 0) {
-      alert("Time to cook should be a positive number");
-      return;
-    }
+    const pref = document.getElementById("food_pref").value;
+    console.log("PREFERENCE", pref);
 
     const response = await recipeDB
       .get(
-        `/recipes?CleanedIngredients=${this.state.ingredients}&Cuisine=${this.state.ingredients}&budget=${budget}&TotalTimeInMins=${time}`,
+        `/recipes?CleanedIngredients=${this.state.ingredients}&Cuisine=${this.state.ingredients}&budget=${budget}&TotalTimeInMins=${time}&typeOfDiet=${pref}`,
       )
       .catch((err) => {
         console.log(err, err.message);
@@ -146,11 +143,6 @@ class Form extends Component {
       () => console.log(this.state),
     );
 
-    if (this.state.cuisine.trim() === "") {
-      alert("Cuisine cannot be empty");
-      return;
-    }
-
     event.preventDefault();
     var dict = {};
     dict["ingredient"] = this.state.ingredients;
@@ -158,12 +150,12 @@ class Form extends Component {
     dict["time_to_cook"] = document.getElementById("time_to_cook").value;
     dict["budget"] = document.getElementById("budget").value;
     dict["time_to_cook"] = document.getElementById("time_to_cook").value;
+    dict["food_pref"] = document.getElementById("food_pref").value;
 
     console.log(dict);
 
     this.props.sendFormData(dict);
     document.getElementById("cuisine").value = "";
-    document.getElementById("time_to_cook").value = "";
 
     // this.searchRecipe();
   };
@@ -224,6 +216,23 @@ class Form extends Component {
               </select>
             </div>
           </div>
+
+          <div className="row pb-1">
+            <div className="input-group col-lg-4 bg-danger text-white flexer-new">
+              <label className="sideLabel-new">Preference:</label> <br />
+              <select
+                style={{ width: "auto" }}
+                name="time_to_cook"
+                id="food_pref"
+                className="form-input"
+              >
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Non-Vegetarian">Non-Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+              </select>
+            </div>
+          </div>
+
           <div className="row pb-1">
             <div className="input-group col-lg-4 bg-danger text-white flexer-new">
               <div className="input-group-append form-input">

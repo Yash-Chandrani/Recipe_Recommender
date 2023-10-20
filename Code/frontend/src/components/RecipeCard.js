@@ -12,7 +12,6 @@ const RecipeCard = ({
   imageUrl,
   budget,
 }) => {
-  console.log(Cuisine);
   const fetchYTId = (url) => {
     if (url.length > 0) {
       let tmp = url.split("be/")[1];
@@ -43,7 +42,10 @@ const RecipeCard = ({
           title="Embedded youtube"
         />
       </StyledYtIFrame>
-      <StyledBudget>Ingredients Required (Budget: ${budget})</StyledBudget>
+      <StyledBudget>
+        <StyledCuisine>Cuisine: {Cuisine}</StyledCuisine>
+        Ingredients Required (Budget: ${budget})
+      </StyledBudget>
       <StyledIngridients>
         {ingredientList(CleanedIngredients).map((ingredient) => (
           <StyledIngredient key={ingredient}>
@@ -152,4 +154,11 @@ const StyledBudget = styled.div`
   padding: 4px 8px;
   text-align: left;
   color: black;
+  font-weight: 800;
+`;
+
+const StyledCuisine = styled.div`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;

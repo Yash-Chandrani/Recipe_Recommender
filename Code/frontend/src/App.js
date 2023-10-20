@@ -81,16 +81,17 @@ class App extends Component {
     const cuis = formDict["cuisine"];
     const cook_time = formDict["time_to_cook"];
     const budget = formDict["budget"];
-    this.getRecipeDetails(items, cuis, cook_time, budget);
+    const pref = formDict["food_pref"];
+    this.getRecipeDetails(items, cuis, cook_time, budget, pref);
     //  alert(typeof(ingredientsInput["cuisine"]));
   };
 
-  getRecipeDetails = async (ingredient, cuis, cook_time, budget) => {
+  getRecipeDetails = async (ingredient, cuis, cook_time, budget, pref) => {
     console.log(ingredient, cuis, cook_time, budget);
     try {
       const response = await recipeDB
         .get(
-          `/recipes?CleanedIngredients=${ingredient}&Cuisine=${cuis}&budget=${budget}&TotalTimeInMins=${cook_time}`,
+          `/recipes?CleanedIngredients=${ingredient}&Cuisine=${cuis}&budget=${budget}&TotalTimeInMins=${cook_time}&typeOfDiet=${pref}`,
         )
         .catch((err) => {
           console.log(err, err.message);

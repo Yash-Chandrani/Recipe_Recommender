@@ -4,6 +4,10 @@ import { useHistory } from "react-router-dom";
 function Header() {
   const history = useHistory();
 
+  if (!sessionStorage.getItem("login_recipe_recommender")) {
+    history.push("/login");
+  }
+
   return (
     <div>
       <ul className="navbar-ul">
@@ -15,6 +19,16 @@ function Header() {
           Recipe Recommender
         </li>
 
+        <li
+          className="navbar-li navbar-li-right"
+          onClick={() => {
+            sessionStorage.removeItem("login_recipe_recommender");
+            history.push("/login");
+          }}
+          style={{ cursor: "pointer" }}
+        >
+          Logout
+        </li>
         <li
           className="navbar-li navbar-li-right"
           onClick={() => history.push("/add-recipe")}
