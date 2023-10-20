@@ -12,7 +12,7 @@ https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/images/recipe-reco
 [![GitHub stars](https://badgen.net/github/stars/Shubh-Nisar/Recipe_Recommender)](https://badgen.net/github/stars/Shubh-Nisar/Recipe_Recommender)
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/Shubh-Nisar/Recipe_Recommender)
 [![Build Status](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/coverage.yml)
-[![codecov](https://codecov.io/gh/Shubh-Nisar/Recipe_Recommender/branch/master/graph/badge.svg?token=f9c0cfdb-7222-453e-a957-a52002edbeef)](https://codecov.io/gh/Shubh-Nisar/Recipe_Recommender)
+[![codecov](https://codecov.io/gh/thosaniparth/Recipe_Recommender/branch/master/graph/badge.svg?token=M48I2E3PLL)](https://codecov.io/gh/thosaniparth/Recipe_Recommender)
 [![Respost - Write comment to new Issue event](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Respost.yml)
 [![Check the source code](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/codeFormatter.yml)
 ![GitHub contributors](https://img.shields.io/github/contributors/Shubh-Nisar/Recipe_Recommender)
