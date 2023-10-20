@@ -116,7 +116,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
      <a href=".\images\sign-up page.png">
         <img src=".\images\sign-up page.png"> 
       </a> 
-    </td> 
+    </td>
 
   </tr>
      <tr style="background: #010203;"> 
