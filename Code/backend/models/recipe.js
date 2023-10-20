@@ -37,7 +37,7 @@ const recipeSchema = new Schema(
       ref: "user",
     },
   },
-  { collection: "recipe" }
+  { collection: "recipe" },
 );
 
 const Recipe = mongoose.model("Recipe", recipeSchema);
