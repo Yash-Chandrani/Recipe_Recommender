@@ -71,7 +71,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - setup for frontend
   open terminal and navigate to the **frontend** folder and execute the following:
   ```
-  npm install
+  npm install 
   ```
 - setup for backend
   open terminal and navigate to the **backend** folder and execute the following:
