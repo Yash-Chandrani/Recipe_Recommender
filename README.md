@@ -138,15 +138,15 @@ Recipe Recommender is a website that suggests users simple food recipes based on
     <td valign="left">
       <p style="color: #FF7A59"> Added time to cook and vegeterian filter
       </p>  
-      <a href="./images/Screen Shot 2021-12-04 at 5.13.08 PM.png">
-        <img src="./images/Screen Shot 2021-12-04 at 5.13.08 PM.png">    
+      <a href=".\images\time to cook and veg filter.png">
+        <img src=".\images\time to cook and veg filter.png">    
       </a>
     </td>
     <td valign="left"> 
       <p style="color: #FF7A59"> Search by ingredients
       </p>
-      <a href="./images/current_stage2.png">
-        <img src="./images/current_stage2.png">          
+      <a href=".\images\ingredients.jpg">
+        <img src=".\images\ingredients.jpg">          
       </a>
     </td>
 
@@ -161,56 +161,19 @@ Recipe Recommender is a website that suggests users simple food recipes based on
       </a> 
     </td> 
     <td valign="left">
-     <p style="color: #FF7A59"> View Recipes
+     <p style="color: #FF7A59"> View Recipes with time to cook filter
       </p>
-     <a href="./images/current_stage4.png">
-        <img src="./images/current_stage4.png"> 
+     <a href=".\images\view recipes with time to cook.png">
+        <img src=".\images\view recipes with time to cook.png"> 
       </a> 
     </td> 
   </tr> 
-  
-  
-   <tr style="background: #010203;"> 
-    <td valign="left">
-     <p style="color: #FF7A59"> View recipes with time to cook
-      </p>
-     <a href="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png">
-        <img src="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png"> 
-      </a> 
-    </td> 
-    <td valign="left">
-     <p style="color: #FF7A59"> View Recipes with calorie information
-      </p>
-     <a href="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png">
-        <img src="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png"> 
-      </a> 
-    </td> 
-  </tr>
-   
-   <tr style="background: #010203 ">
-    <td valign="left"> 
-      <p style="color: #FF7A59"> View Recipes with diet-type information
-      </p>
-      <a href="./images/diet_type.png"> 
-        <img src="./images/diet_type.png" >      
-      </a>
-<!--     </td>
-  </tr>
-   <tr style="background: #010203 "> -->
-    <td valign="left"> 
-      <p style="color: #FF7A59"> Screenshot of recipe results receieved on email
-      </p>
-      <a href="./images/recipes-email.jpeg"> 
-        <img src="./images/recipes-email.jpeg" >      
-      </a>
-    </td>
-  </tr>
    <tr style="background: #010203 ">
     <td valign="left"> 
       <p style="color: #FF7A59"> Screenshot of users collection created in mongo
       </p>
-      <a href="./images/user-collection-db.png"> 
-        <img src="./images/user-collection-db.png" >      
+      <a href=".\images\users in db.png"> 
+        <img src=".\images\users in db.png" >      
       </a>
     </td>
 <!--   </tr>
@@ -219,11 +182,20 @@ Recipe Recommender is a website that suggests users simple food recipes based on
     <td valign="left"> 
       <p style="color: #FF7A59"> Screenshot of recipe collections in mongo
       </p>
-      <a href="./images/db-screenshot.jpeg"> 
-        <img src="./images/db-screenshot.jpeg" >      
+      <a href=".\images\recipe in db.png"> 
+        <img src=".\images\recipe in db.png" >      
       </a>
     </td>
   </tr>
+  <tr style="background: #010203;"> 
+    <td valign="left">
+     <p style="color: #FF7A59"> Preference Filter
+      </p>
+     <a href=".\images\preference filter.png">
+        <img src=".\images\preference filter.png"> 
+      </a> 
+    </td> 
+  </tr> 
  
  </table>
 
