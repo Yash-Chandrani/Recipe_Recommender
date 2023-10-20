@@ -7,7 +7,7 @@ https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/images/recipe-reco
 ![RECIPE RECOMMENDER](https://user-images.githubusercontent.com/40118578/139968487-1150b64e-d8d3-4f2e-a5d3-9a48d19ff64b.gif)
 
 [![Made With](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
-[![DOI](https://zenodo.org/badge/429944963.svg)](https://zenodo.org/badge/latestdoi/429944963)
+[![DOI](https://zenodo.org/badge/703203979.svg)](https://zenodo.org/doi/10.5281/zenodo.10023760)
 [![GitHub issues open](https://img.shields.io/github/issues/Shubh-Nisar/Recipe_Recommender)](https://github.com/Shubh-Nisar/Recipe_Recommender/issues)
 [![GitHub stars](https://badgen.net/github/stars/Shubh-Nisar/Recipe_Recommender)](https://badgen.net/github/stars/Shubh-Nisar/Recipe_Recommender)
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/Shubh-Nisar/Recipe_Recommender)
