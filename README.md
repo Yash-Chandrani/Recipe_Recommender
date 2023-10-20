@@ -22,11 +22,7 @@ https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/images/recipe-reco
 ![Lines of code](https://img.shields.io/badge/Lines%20of%20Code-123.5k-green)
 ![GitHub code size in bytes](https://img.shields.io/badge/Code%20Size-27,365KB-brightgreen)
 
-
-
 https://github.com/Shubh-Nisar/Recipe_Recommender/assets/65588226/bd0d04ef-6dba-4a6b-a989-1592bde95400
-
-
 
    <h3>🍔 Our motto: Eat good, Be Healthy, Stay Happy 🍔</h3>
 
