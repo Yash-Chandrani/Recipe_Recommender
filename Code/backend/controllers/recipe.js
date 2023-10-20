@@ -38,7 +38,6 @@ async function getRecipes({
   let query = {};
   console.log("Filters in getRecipes", filters);
   if (filters) {
-
     for (const prop in filters) {
       console.log(filters[prop], prop);
     }
@@ -53,7 +52,7 @@ async function getRecipes({
       console.log("the search string", str);
     }
     var time = parseInt(filters["totalTime"]);
-    console.log(time, filters["TotalTimeInMins"], typeof(filters["totalTime"]));
+    console.log(time, filters["TotalTimeInMins"], typeof filters["totalTime"]);
     var budget = parseInt(filters["budget"]);
     if (time) {
       query.TotalTimeInMins = { $lte: time };
