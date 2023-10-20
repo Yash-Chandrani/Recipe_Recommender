@@ -14,6 +14,7 @@ const Error = require("../errors/error");
  * @return {Void} Return Void.*/
 async function postRecipes(addRecipeDetails) {
   console.log("inside model");
+  console.log(addRecipeDetails);
   console.log(typeof Recipe);
   try {
     const res = await Recipe.create(addRecipeDetails);
@@ -38,6 +39,9 @@ async function getRecipes({
   let query = {};
   console.log("Filters in getRecipes", filters);
   if (filters) {
+    for (const prop in filters) {
+      console.log(filters[prop], prop);
+    }
     if (filters.CleanedIngredients) {
       var str = "(?i)";
 
@@ -48,7 +52,11 @@ async function getRecipes({
       query.CleanedIngredients = { $regex: str };
       console.log("the search string", str);
     }
+    for (const prop in filters) {
+      console.log(filters[prop] + "pppp" + prop + "oo");
+    }
     var time = parseInt(filters["totalTime"]);
+    console.log(time, filters["TotalTimeInMins"], typeof filters["totalTime"]);
     var budget = parseInt(filters["budget"]);
     if (time) {
       query.TotalTimeInMins = { $lte: time };
@@ -166,8 +174,8 @@ async function apiGetRecipes(req, res, next) {
   if (req.query.Cuisine && req.query.Cuisine != '""') {
     filters.Cuisine = req.query.Cuisine;
   }
-  if (req.query.totalTime) {
-    filters.totalTime = req.query.totalTime;
+  if (req.query.TotalTimeInMins) {
+    filters.totalTime = req.query.TotalTimeInMins;
   }
   if (req.query.budget) {
     filters.budget = req.query.budget;
@@ -175,7 +183,6 @@ async function apiGetRecipes(req, res, next) {
   if (req.query.typeOfDiet) {
     filters.typeOfDiet = req.query.typeOfDiet;
   }
-
   try {
     const { recipesList, totalNumRecipes } = await getRecipes({
       filters,
