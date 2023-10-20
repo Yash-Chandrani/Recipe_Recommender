@@ -1,4 +1,4 @@
-## Phase-3 Deltas Explained
+## Phase-4 (Group:2) Deltas Explained
 
 https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/images/recipe-recommender-demo.mp4
 
@@ -8,23 +8,19 @@ https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/images/recipe-reco
 
 [![Made With](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
 [![DOI](https://zenodo.org/badge/429944963.svg)](https://zenodo.org/badge/latestdoi/429944963)
-[![GitHub issues open](https://img.shields.io/github/issues/thosaniparth/Recipe_Recommender)](https://github.com/thosaniparth/Recipe_Recommender/issues)
-[![GitHub stars](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)
-![Github closes issues](https://img.shields.io/github/issues-closed-raw/thosaniparth/Recipe_Recommender)
-[![Build Status](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender)
-[![codecov](https://codecov.io/gh/thosaniparth/Recipe_Recommender/branch/master/graph/badge.svg?token=M48I2E3PLL)](https://codecov.io/gh/thosaniparth/Recipe_Recommender)
-[![Respost - Write comment to new Issue event](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Respost.yml)
-[![Check the source code](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/codeFormatter.yml)
-![GitHub contributors](https://img.shields.io/github/contributors/thosaniparth/Recipe_Recommender)
-[![Close as a feature](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/close_as_a_feature.yml)
-[![Code Formatter and Syntax Check](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
-
-<!-- [![Running Code Coverage](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml) -->
-
-[![Style Checker and Prettify Code](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
+[![GitHub issues open](https://img.shields.io/github/issues/Shubh-Nisar/Recipe_Recommender)](https://github.com/Shubh-Nisar/Recipe_Recommender/issues)
+[![GitHub stars](https://badgen.net/github/stars/Shubh-Nisar/Recipe_Recommender)](https://badgen.net/github/stars/Shubh-Nisar/Recipe_Recommender)
+![Github closes issues](https://img.shields.io/github/issues-closed-raw/Shubh-Nisar/Recipe_Recommender)
+[![Build Status](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/coverage.yml)
+[![codecov](https://codecov.io/gh/Shubh-Nisar/Recipe_Recommender/branch/master/graph/badge.svg?token=f9c0cfdb-7222-453e-a957-a52002edbeef)](https://codecov.io/gh/Shubh-Nisar/Recipe_Recommender)
+[![Respost - Write comment to new Issue event](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Respost.yml)
+[![Check the source code](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/codeFormatter.yml)
+![GitHub contributors](https://img.shields.io/github/contributors/Shubh-Nisar/Recipe_Recommender)
+[![Code Formatter and Syntax Check](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
+[![Style Checker and Prettify Code](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
 [![Greetings](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/greetings.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/greetings.yml)
 ![Lines of code](https://img.shields.io/badge/Lines%20of%20Code-123.5k-green)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/thosaniparth/Recipe_Recommender)
+![GitHub code size in bytes](https://img.shields.io/badge/Code%20Size-27,365KB-brightgreen)
 
 https://user-images.githubusercontent.com/25223347/140403709-a062e7c5-4500-49d4-9758-aea9e5fa5442.mp4
 
@@ -44,8 +40,6 @@ Recipe Recommender is a website that suggests users simple food recipes based on
 - [ ] The interface can also takes the type of cuisine the user wants.
 - [ ] For each recipe, we show the key ingredients, instructions and a sample image.
 - [ ] Upon user request we also send the list of recipes to the user.
-
-Source documentation can be found at: [Recipe Recommender Docs] https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/Docs/Recipe%20Recommender%20Source%20Documentation%20-%20Google%20Docs.pdf
 
 ## Technology Stack
 
@@ -74,7 +68,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - setup for frontend
   open terminal and navigate to the **frontend** folder and execute the following:
   ```
-  npm install
+  npm install --force
   ```
 - setup for backend
   open terminal and navigate to the **backend** folder and execute the following:
@@ -109,17 +103,35 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
     <td valign="left"> 
       <p style="color: #FF7A59"> Login Page
       </p>
-      <a href="./images/prev_stage1.jpg"> 
-        <img src="./images/Screen Shot 2021-12-04 at 5.12.44 PM.png" >      
+      <a href=".\images\sign-in page.png"> 
+        <img src=".\images\sign-in page.png" >      
       </a>
     </td>
-    <td valign="left"> 
+    <td valign="left">
+     <p style="color: #FF7A59"> Sign Up Page
+      </p>
+     <a href=".\images\sign-up page.png">
+        <img src=".\images\sign-up page.png"> 
+      </a> 
+    </td>
+
+  </tr>
+     <tr style="background: #010203;"> 
+    <td valign="left">
+     <p style="color: #FF7A59"> Home Page
+      </p>
+     <a href=".\images\home page.png">
+        <img src=".\images\home page.png"> 
+      </a> 
+    </td>
+        <td valign="left"> 
       <p style="color: #FF7A59"> Search Recipe
       </p>
-      <a href="./images/current_stage1.png">
-        <img src="./images/current_stage1.png"> 
+      <a href=".\images\search recipe page.png">
+        <img src=".\images\search recipe page.png"> 
       </a>
-    </td>
+    </td> 
+    
   </tr>
   
   <tr style="background: #010203;"> 
@@ -144,8 +156,8 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
     <td valign="left">
      <p style="color: #FF7A59"> Add new recipe form
       </p>
-     <a href="./images/Screen Shot 2021-12-04 at 5.12.59 PM.png">
-        <img src="./images/Screen Shot 2021-12-04 at 5.12.59 PM.png"> 
+     <a href=".\images\add recipe page.png">
+        <img src=".\images\add recipe page.png"> 
       </a> 
     </td> 
     <td valign="left">
@@ -156,6 +168,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
       </a> 
     </td> 
   </tr> 
+  
   
    <tr style="background: #010203;"> 
     <td valign="left">
@@ -273,8 +286,6 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - [x] Leveraged React hooks and arrow functions for improved code readability.
 - [x] Utilized styled-components for styling the user interface.
 
-Regenerate
-
 ## Scope of improvement:
 
 - [ ] Add more filters and also recommend restaurants to users based on their inputs.
@@ -294,7 +305,7 @@ Please see our [CONTRIBUTING.md](https://github.com/Shubh-Nisar/Recipe_Recommend
   <tr>
     <td align="center"><a href="https://github.com/tvt15"><img src="https://avatars.githubusercontent.com/u/73994466?s=400&u=dc3cc47577ecc7e1951f798a119e08eb96fdaa3a&v=4" width="75px;" alt=""/><br /><sub><b>Tanishq Todkar</b></sub></a></td>
     <td align="center"><a href="https://github.com/Shubh-Nisar"><img src="https://avatars.githubusercontent.com/u/65038837?v=4" width="75px;" alt=""/><br /><sub><b>Shubh Nisar</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/tanay306"><img src="https://github.com/Shubh-Nisar/CSC510-G2/assets/65588226/fe9079fe-93ca-4e96-a7b1-184dfb132a04.png" width="75px;" alt=""/><br /><sub><b>Tanay Gandhi</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/tanay306"><img src="https://avatars.githubusercontent.com/u/65588226?s=400&u=7fce2191e29891061aaab91e5d0adcaa95fd6868&v=4" width="75px;" alt=""/><br /><sub><b>Tanay Gandhi</b></sub></a><br /></td>
      <td align="center"><a href="https://github.com/Neel317"><img src="https://avatars.githubusercontent.com/u/67258403?v=4" width="75px;" alt=""/><br /><sub><b>Neel Dudehliya</b></sub></a><br /></td>
    
   </tr>
