@@ -49,7 +49,7 @@ class Form extends Component {
 
     // this.props.sendRecipeFormData(dict);
     console.log(all_val_filled);
-    if (all_val_filled.length == 6) {
+    if (all_val_filled.length == 8) {
       this.submitToApi(dict);
       this.setState({
         // cuisine : "Any",
