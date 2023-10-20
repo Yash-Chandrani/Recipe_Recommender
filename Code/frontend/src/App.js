@@ -83,7 +83,6 @@ class App extends Component {
     const budget = formDict["budget"];
     const pref = formDict["food_pref"];
     this.getRecipeDetails(items, cuis, cook_time, budget, pref);
-    //  alert(typeof(ingredientsInput["cuisine"]));
   };
 
   getRecipeDetails = async (ingredient, cuis, cook_time, budget, pref) => {
