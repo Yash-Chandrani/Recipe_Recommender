@@ -1,4 +1,4 @@
-## Phase-4 Deltas Explained
+## Phase-4 (Group:2) Deltas Explained
 
 https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/images/recipe-recommender-demo.mp4
 
@@ -16,7 +16,6 @@ https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/images/recipe-reco
 [![Respost - Write comment to new Issue event](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Respost.yml)
 [![Check the source code](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/codeFormatter.yml)
 ![GitHub contributors](https://img.shields.io/github/contributors/Shubh-Nisar/Recipe_Recommender)
-[![Close as a feature](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/close_as_a_feature.yml)
 [![Code Formatter and Syntax Check](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
 [![Style Checker and Prettify Code](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
 [![Greetings](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/greetings.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/greetings.yml)
@@ -41,8 +40,6 @@ Recipe Recommender is a website that suggests users simple food recipes based on
 - [ ] The interface can also takes the type of cuisine the user wants.
 - [ ] For each recipe, we show the key ingredients, instructions and a sample image.
 - [ ] Upon user request we also send the list of recipes to the user.
-
-Source documentation can be found at: [Recipe Recommender Docs] https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/Docs/Recipe%20Recommender%20Source%20Documentation%20-%20Google%20Docs.pdf
 
 ## Technology Stack
 
@@ -71,7 +68,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - setup for frontend
   open terminal and navigate to the **frontend** folder and execute the following:
   ```
-  npm install 
+  npm install --force
   ```
 - setup for backend
   open terminal and navigate to the **backend** folder and execute the following:
@@ -116,7 +113,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
      <a href=".\images\sign-up page.png">
         <img src=".\images\sign-up page.png"> 
       </a> 
-    </td> 
+    </td>
 
   </tr>
      <tr style="background: #010203;"> 
@@ -288,8 +285,6 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - [x] Utilized functional components and ES6 syntax, replacing older ES5 classes.
 - [x] Leveraged React hooks and arrow functions for improved code readability.
 - [x] Utilized styled-components for styling the user interface.
-
-Regenerate
 
 ## Scope of improvement:
 
