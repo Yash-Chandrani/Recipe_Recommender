@@ -1,4 +1,4 @@
-## Phase-3 Deltas Explained
+## Phase-4 Deltas Explained
 
 https://github.com/Shubh-Nisar/Recipe_Recommender/blob/master/images/recipe-recommender-demo.mp4
 
@@ -106,17 +106,35 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
     <td valign="left"> 
       <p style="color: #FF7A59"> Login Page
       </p>
-      <a href="./images/prev_stage1.jpg"> 
-        <img src="./images/Screen Shot 2021-12-04 at 5.12.44 PM.png" >      
+      <a href=".\images\sign-in page.png"> 
+        <img src=".\images\sign-in page.png" >      
       </a>
     </td>
-    <td valign="left"> 
+    <td valign="left">
+     <p style="color: #FF7A59"> Sign Up Page
+      </p>
+     <a href=".\images\sign-up page.png">
+        <img src=".\images\sign-up page.png"> 
+      </a> 
+    </td> 
+
+  </tr>
+     <tr style="background: #010203;"> 
+    <td valign="left">
+     <p style="color: #FF7A59"> Home Page
+      </p>
+     <a href=".\images\home page.png">
+        <img src=".\images\home page.png"> 
+      </a> 
+    </td>
+        <td valign="left"> 
       <p style="color: #FF7A59"> Search Recipe
       </p>
-      <a href="./images/current_stage1.png">
-        <img src="./images/current_stage1.png"> 
+      <a href=".\images\search recipe page.png">
+        <img src=".\images\search recipe page.png"> 
       </a>
-    </td>
+    </td> 
+    
   </tr>
   
   <tr style="background: #010203;"> 
@@ -141,8 +159,8 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
     <td valign="left">
      <p style="color: #FF7A59"> Add new recipe form
       </p>
-     <a href="./images/Screen Shot 2021-12-04 at 5.12.59 PM.png">
-        <img src="./images/Screen Shot 2021-12-04 at 5.12.59 PM.png"> 
+     <a href=".\images\add recipe page.png">
+        <img src=".\images\add recipe page.png"> 
       </a> 
     </td> 
     <td valign="left">
@@ -153,6 +171,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
       </a> 
     </td> 
   </tr> 
+  
   
    <tr style="background: #010203;"> 
     <td valign="left">

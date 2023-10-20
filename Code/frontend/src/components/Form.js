@@ -111,11 +111,6 @@ class Form extends Component {
     const budget = document.getElementById("budget").value;
     const time = document.getElementById("time_to_cook").value;
 
-    if (isNaN(budget) || budget <= 0) {
-      alert("Budget should be a positive number");
-      return;
-    }
-
     if (isNaN(time) || time <= 0) {
       alert("Time to cook should be a positive number");
       return;
