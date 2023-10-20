@@ -14,6 +14,7 @@ const Error = require("../errors/error");
  * @return {Void} Return Void.*/
 async function postRecipes(addRecipeDetails) {
   console.log("inside model");
+  console.log(addRecipeDetails);
   console.log(typeof Recipe);
   try {
     const res = await Recipe.create(addRecipeDetails);
@@ -47,6 +48,9 @@ async function getRecipes({
       }
       query.CleanedIngredients = { $regex: str };
       console.log("the search string", str);
+    }
+    for (const prop in filters) {
+      console.log(filters[prop] + "pppp" + prop + "oo");
     }
     var time = parseInt(filters["totalTime"]);
     var budget = parseInt(filters["budget"]);
