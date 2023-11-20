@@ -26,6 +26,7 @@ class App extends Component {
       //NoIngredients : 0,
       ingredients: new Set(),
       recipeList: [],
+      cuisineList: [],
       email: "",
       flag: false,
       loginFlag: sessionStorage.getItem("login_recipe_recommender")
