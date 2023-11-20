@@ -343,3 +343,21 @@ li.translated_instruction_item {
   background-color: black;
   color: white;
 }
+.signupLable{
+  float: left;
+  width: 250px;
+  padding: 25px 0px;
+  text-align: right;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.signupInput{
+  float: left;
+  width: 65%;
+}
+.signupInput input{
+  margin-left: 0px;
+}
+.clear{
+  clear: both;
+}
