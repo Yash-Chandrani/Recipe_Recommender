@@ -14,7 +14,8 @@ const signUpGet = async (req, res) => {
 
 const signUpPost = async (req, res) => {
   try {
-        const userExists = await User.findOne({ username: req.body.username });
+    console.log(req.body.username)
+    const userExists = await User.findOne({ username: req.body.username });
     if (userExists) {
       throw new Error.CustomAPIError("User already exists", 409);
     }
