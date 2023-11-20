@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <StyledCenterFlexer>
-      <StyledHeader>My Recipes &#128523;</StyledHeader>
+      <StyledHeader>My Recipes<AccessibleEmoji label="Smiling Face with Smiling Eyes" emoji="😊" /></StyledHeader>
       <StyledFlexer>
         {allRecipes.map((recipe) => (
           <RecipeCard
@@ -83,3 +83,8 @@ const StyledFlexer = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
 `;
+const AccessibleEmoji = ({ label, emoji }) => (
+  <span role="img" aria-label={label}>
+    {emoji}
+  </span>
+);

@@ -42,14 +42,15 @@ class Form extends Component {
     let all_val_filled = [];
     Object.keys(dict).map((key, value) => {
       console.log(key, dict[key], value);
-      if (dict[key] != "") {
+      if (dict[key] !== "") {
         all_val_filled.push(key);
       }
+      return null; // Explicitly returning null
     });
 
     // this.props.sendRecipeFormData(dict);
     console.log(all_val_filled);
-    if (all_val_filled.length == 8) {
+    if (all_val_filled.length === 8) {
       this.submitToApi(dict);
       this.setState({
         // cuisine : "Any",
@@ -92,9 +93,9 @@ class Form extends Component {
 
   // render function dispays the UI content i.e the form content
   render() {
-    {
+    
       console.log("AddRecipeForm Render Function");
-    }
+    
 
     // returns jsx element
     return (
