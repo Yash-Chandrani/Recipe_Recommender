@@ -24,7 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "tests": "CI=true npm run test",
     "lint": "npx eslint ."
@@ -51,6 +51,7 @@
     "@testing-library/react": "^11.2.7",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
+    "mock-local-storage": "^1.1.24",
     "prettier": "3.0.3"
   }
 }

@@ -1,25 +1,27 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 import React from "react";
-test("renders learn react link", () => {
+
+
+test("renders Recipe link", () => {
   render(<App />);
-  const linkElement = screen.getByText(/Recipe/i);
+  const linkElement = screen.queryByText(/Recipe/i);
   expect(linkElement).toBeInTheDocument();
 });
 
-test("renders learn react link", () => {
+test("renders Recommender link", () => {
   render(<App />);
   const linkElement = screen.getByText(/Recommender/i);
   expect(linkElement).toBeInTheDocument();
 });
 
-test("renders learn react link", () => {
+test("renders Email link", () => {
   render(<App />);
   const linkElement = screen.getByText(/Email/i);
   expect(linkElement).toBeInTheDocument();
 });
 
-test("renders learn react link", () => {
+test("renders Ingredient link", () => {
   render(<App />);
   const linkElement = screen.getByText(/Ingredient/i);
   expect(linkElement).toBeInTheDocument();
