@@ -47,22 +47,25 @@ const signInGet = async (req, res) => {
 const signInPost = async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
+
     if (user) {
-      if (await user.matchPassword(req.body.password)) {
+      const isPasswordValid = await user.matchPassword(req.body.password);
+
+      if (isPasswordValid) {
         const token = generateToken(req.body.username);
-        return res
-          .status(200)
-          .json({ message: "You have been logged in successfully" });
+        return res.status(200).json({ message: "You have been logged in successfully", token });
       } else {
-        throw new Error.BadRequestError("Incorrect username or password");
+        return res.status(400).json({ error: "Incorrect username or password" });
       }
     } else {
-      throw new Error.BadRequestError("Incorrect username or password");
+      return res.status(400).json({ error: "Incorrect username or password" });
     }
   } catch (err) {
-    throw err;
+    console.error(err); // Log the error for debugging purposes
+    return res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
 
 const signOutGet = async (req, res) => {
   try {
