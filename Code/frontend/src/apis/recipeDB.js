@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://reciepe-recommender-backend.onrender.com",
+  baseURL: ""https://reciepe-recommender-backend.onrender.com/api/v4"",
 });
