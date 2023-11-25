@@ -206,7 +206,7 @@ class Form extends Component {
 
           <div className="row pb-1">
             <div className="input-group col-lg-4 bg-danger text-white flexer-new">
-              <label className="sideLabel-new"> Cuisine: </label> <br />
+              <label className="sideLabel-new cuisineLabel"> Cuisine: </label> <br />
               <div className="input-group-append form-input">
                 <select
                   name="cuisine"
