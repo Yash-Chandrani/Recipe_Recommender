@@ -15,6 +15,7 @@ function signupForm(props) {
   const [state, setState] = useState({
     username: "",
     password: "",
+    c_password: "",
     successMessage: null,
     failMessage: null,
   });
@@ -32,50 +33,83 @@ function signupForm(props) {
     const stateTemp = {
       username: state.username,
       password: state.password,
+      c_password: state.c_password
     };
-    const response = await recipeDB.post("/signUp", stateTemp).catch((err) => {
-      console.log(err, err.message);
-    });
-    if (response) {
+    if(state.password != state.c_password){
       setState((prevState) => ({
         ...prevState,
-        successMessage: "Sign Up successful. Redirecting to home page..",
-        failMessage: null,
-      }));
-      sessionStorage.setItem("login_recipe_recommender", state.username);
-      props.setLoginFlag;
-      props.history.push("/login");
-    } else {
-      setState((prevState) => ({
-        ...prevState,
-        failMessage: "Sign Up unsuccessful. Please try again.",
+        failMessage: "Passswords do not match. Please try again.",
         successMessage: null,
       }));
+    }else{
+      const response = await recipeDB.post("/signUp", stateTemp).catch((err) => {
+        console.log(err, err.message);
+      });
+      if (response) {
+        setState((prevState) => ({
+          ...prevState,
+          successMessage: "Sign Up successful. Redirecting to home page..",
+          failMessage: null,
+        }));
+        sessionStorage.setItem("login_recipe_recommender", state.username);
+        props.setLoginFlag;
+        props.history.push("/login");
+      } else {
+        setState((prevState) => ({
+          ...prevState,
+          failMessage: "Sign Up unsuccessful. Please try again.",
+          successMessage: null,
+        }));
+      }
     }
+    
   };
 
   return (
     <MainContainer>
+      
       <div id="parent" style={{ height: "100%" }}>
         <StyledForm id="form_login">
           <div>
             <StlyedH1>SIGN UP</StlyedH1>
-            <label>Username</label>
-            <input
-              type="text"
-              id="username"
-              value={state.username}
-              onChange={changeValue}
-            />
+            <div class="signupLable">
+              <label style={{ maxWidth: "250px" }}>Username</label>
+            </div>
+            <div class="signupInput">
+              <input
+                type="text"
+                id="username"
+                value={state.username}
+                onChange={changeValue}
+              />
+            </div>
           </div>
-          <div>
-            <label>Password</label>
+          <div class="clear">
+            <div class="signupLable">
+              <label  style={{ maxWidth: "250px" }}>Password</label>
+            </div>
+            <div class="signupInput">
             <input
               type="password"
               id="password"
               value={state.password}
               onChange={changeValue}
             />
+            </div>
+          </div>
+          <div class="clear">
+            <div class="signupLable">
+              <label  style={{ maxWidth: "250px" }}>Confirm Password</label>
+            </div>            
+            <div class="signupInput">
+              <input
+                type="password"
+                id="c_password"
+                value={state.c_password}
+                onChange={changeValue}
+              />
+            </div>
+            
           </div>
           <br />
           <button
