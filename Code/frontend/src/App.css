@@ -210,7 +210,7 @@ input[type="checkbox"] {
 
 /* Styling for the cusine selection part */
 select {
-  width: 20%;
+  width: auto;
 
   padding: 12px 20px;
   margin: 8px 0;
@@ -344,3 +344,10 @@ Styling for the individial list items in recipe ingredient list*/
   background-color: black;
   color: white;
 }
+
+
+.cuisineLabel
+{
+  margin-right: 13px;
+}
+

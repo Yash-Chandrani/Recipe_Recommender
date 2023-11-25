@@ -15,8 +15,29 @@ class Form extends Component {
       cuisineState: 0,
       cuisine: "",
       recipes: [],
+      cuisineList:[],
     };
+    this.getCuisines();
   }
+
+  getCuisines = async () => {
+    try {
+      const response = await recipeDB
+        .get(
+          `/recipes/cuisines`,
+        )
+        .catch((err) => {
+          console.log(err, err.message);
+        });
+      this.setState({
+        cuisineList: response.data.cuisines,
+      });
+      console.log(response.data.cuisines);
+      console.log(this.state.cuisineList);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   // function to change cuisine state, triggered on selection of a cuisine item.
   /*cuisineUpdate = (event) => {
@@ -185,9 +206,18 @@ class Form extends Component {
 
           <div className="row pb-1">
             <div className="input-group col-lg-4 bg-danger text-white flexer-new">
-              <label className="sideLabel-new"> Cuisine: </label> <br />
+              <label className="sideLabel-new cuisineLabel"> Cuisine: </label> <br />
               <div className="input-group-append form-input">
-                <input type="text" id="cuisine" />
+                <select
+                  name="cuisine"
+                  id="cuisine"
+                  className="form-input"
+                >
+                  {
+                    this.state.cuisineList.map( (x,y) => 
+                      <option key={y}>{x}</option> )
+                  }
+              </select>
               </div>
             </div>
           </div>
