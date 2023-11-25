@@ -106,7 +106,7 @@ class App extends Component {
     }
   };
 
-  setLoginFlag() {
+  setLoginFlag = () => {
     console.log("set login flag");
     this.setState({
       loginFlag: sessionStorage.getItem("login_recipe_recommender")

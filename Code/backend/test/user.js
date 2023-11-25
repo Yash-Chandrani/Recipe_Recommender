@@ -61,8 +61,8 @@ describe("Sign Up Route", () => {
         .request(app)
         .post("/api/v4/signUp")
         .send({
-          username: "tanny",
-          password: "tanay",
+          username: "smit123456",
+          password: "smit1234"
         })
         .end((err, res) => {
           if (err) {
