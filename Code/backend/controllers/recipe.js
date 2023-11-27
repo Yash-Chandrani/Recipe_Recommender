@@ -33,8 +33,6 @@ async function postRecipes(addRecipeDetails) {
  */
 async function getRecipes({
   filters = null,
-  page = 0,
-  recipesPerPage = 10,
 } = {}) {
   let query = {};
   console.log("Filters in getRecipes", filters);
@@ -52,17 +50,20 @@ async function getRecipes({
       query.CleanedIngredients = { $regex: str };
       console.log("the search string", str);
     }
-    for (const prop in filters) {
-      console.log(filters[prop] + "pppp" + prop + "oo");
+
+    if(filters["totalTime"]){
+      var time = parseInt(filters["totalTime"]);
+      console.log(time, filters["TotalTimeInMins"], typeof filters["totalTime"]);
+      if (time) {
+        query.TotalTimeInMins = { $lte: time };
+      }
     }
-    var time = parseInt(filters["totalTime"]);
-    console.log(time, filters["TotalTimeInMins"], typeof filters["totalTime"]);
-    var budget = parseInt(filters["budget"]);
-    if (time) {
-      query.TotalTimeInMins = { $lte: time };
-    }
-    if (budget) {
-      query.budget = { $lte: budget };
+
+    if(filters["budget"]){
+      var budget = parseInt(filters["budget"]);
+      if (budget) {
+        query.budget = { $lte: budget };
+      }
     }
     if (filters["typeOfDiet"]) {
       query.typeOfDiet = filters["typeOfDiet"];
