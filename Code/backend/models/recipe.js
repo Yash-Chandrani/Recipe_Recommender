@@ -32,10 +32,6 @@ const recipeSchema = new Schema(
     typeOfDiet: {
       type: String,
     },
-    user: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "user",
-    },
   },
   { collection: "recipe" },
 );

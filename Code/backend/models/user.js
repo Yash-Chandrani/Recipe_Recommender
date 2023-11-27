@@ -11,6 +11,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  collection: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }]
 });
 
 userSchema.methods.matchPassword = async function (enteredPassword) {
