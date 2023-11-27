@@ -1,7 +1,9 @@
 const express = require("express");
 const User = require("../models/user");
 const { generateToken } = require("../utils/generateToken");
+const { authenticateToken } = require("../utils/auth");
 const Error = require("../errors/error");
+
 
 const signUpGet = async (req, res) => {
   try {
@@ -47,13 +49,21 @@ const signInGet = async (req, res) => {
 const signInPost = async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
+    console.log("user:", user);
 
     if (user) {
       const isPasswordValid = await user.matchPassword(req.body.password);
+      debugger;
+      console.log("isPasswordValid:", isPasswordValid)
 
       if (isPasswordValid) {
-        const token = generateToken(req.body.username);
-        return res.status(200).json({ message: "You have been logged in successfully", token });
+        const token = await generateToken(req.body.username);
+        console.log("Setting cookie with token:", token);
+        const expiresIn = 60 * 60 * 24 * 7; // One week
+        const expires = new Date(Date.now() + expiresIn);
+        res.cookie("token", token, {expires, });  // Set the cookie after generating the token
+        console.log("Cookie set: ",res.get( "Set-Cookie" ));
+        return res.status(200).json({ message: "You have been logged in successfully", token, username: req.body.username });
       } else {
         return res.status(400).json({ error: "Incorrect username or password" });
       }
@@ -67,15 +77,16 @@ const signInPost = async (req, res) => {
 };
 
 
+
 const signOutGet = async (req, res) => {
   try {
-    return res
-      .status(200)
-      .json({ message: "You have been logged out successfully" });
+    res.clearCookie("token");
+    return res.status(200).json({ message: "You have been logged out successfully" });
   } catch (err) {
-    throw Error.CustomAPIError("Something went wrong");
+    throw new Error.CustomAPIError("Something went wrong");
   }
 };
+
 
 const userProfileGet = async (req, res) => {
   try {

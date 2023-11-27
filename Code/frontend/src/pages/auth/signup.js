@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom";
 
 function signupForm(props) {
   const history = useHistory();
-  if (sessionStorage.getItem("login_recipe_recommender")) {
+  if (localStorage.getItem("login_recipe_recommender")) {
     props.history.push("/home");
   }
 
@@ -35,7 +35,7 @@ function signupForm(props) {
       password: state.password,
       c_password: state.c_password
     };
-    if(state.password != state.c_password){
+    if(state.password !== state.c_password){
       setState((prevState) => ({
         ...prevState,
         failMessage: "Passswords do not match. Please try again.",
@@ -51,8 +51,8 @@ function signupForm(props) {
           successMessage: "Sign Up successful. Redirecting to home page..",
           failMessage: null,
         }));
-        sessionStorage.setItem("login_recipe_recommender", state.username);
-        props.setLoginFlag;
+        localStorage.setItem("login_recipe_recommender", state.username);
+        props.setLoginFlag();
         props.history.push("/login");
       } else {
         setState((prevState) => ({
