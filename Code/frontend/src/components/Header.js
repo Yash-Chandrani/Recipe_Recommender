@@ -43,6 +43,13 @@ function Header() {
         >
           Search Recipes
         </li>
+        <li
+          className="navbar-li navbar-li-right"
+          onClick={() => history.push("/saved-recipes")}
+          style={{ cursor: "pointer" }}
+        >
+          Saved Recipes
+        </li>
       </ul>
     </div>
   );
