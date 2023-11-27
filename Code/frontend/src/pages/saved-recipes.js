@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./Home.css";
+import "./home/Home.css";
 import styled from "styled-components";
 
-import recipeDB from "../../apis/recipeDB";
-import RecipeCard from "../../components/RecipeCard";
+import recipeDB from "../apis/recipeDB";
+import RecipeCard from "../components/RecipeCard";
 
-const Home = () => {
+const SavedRecipes = () => {
   const [allRecipes, setAllRecipes] = useState([
     {
       CleanedIngredients: "tmp",
@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <StyledCenterFlexer>
-      <StyledHeader>Recipes<AccessibleEmoji label="Smiling Face with Smiling Eyes" emoji="😊" /></StyledHeader>
+      <StyledHeader>Saved Recipes<AccessibleEmoji label="red heart" emoji="❤️" /></StyledHeader>
       <StyledFlexer>
         {allRecipes.map((recipe) => (
           <RecipeCard
@@ -58,7 +58,7 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default SavedRecipes;
 
 const StyledHeader = styled.div`
   font-size: 32px;
