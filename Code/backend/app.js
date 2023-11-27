@@ -28,6 +28,8 @@ const {
   signUpRouter,
   signOutRouter,
   userProfileRouter,
+  getCollectionRouter,
+  addToCollectionRouter,
 } = require("./routes/user.js");
 const { getRecipe, getCuisine, postRecipe } = require("./routes/recipe.js");
 const parsingRecipeData = require("./utils/parsingRecipeData.js");
@@ -41,6 +43,8 @@ app.use("/api/v4/signIn", signInRouter);
 app.use("/api/v4/signUp", signUpRouter);
 app.use("/api/v4/signOut", signOutRouter);
 app.use("/api/v4/userProfile", userProfileRouter);
+app.use("/api/v4/addToCollection", addToCollectionRouter);
+app.use("/api/v4/getCollection", getCollectionRouter);
 
 app.use("/api/v4/recipes", getRecipe);
 app.use("/api/v4/recipes/cuisines", getCuisine);
