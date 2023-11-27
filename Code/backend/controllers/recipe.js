@@ -3,9 +3,15 @@ const { default: mongoose } = require("mongoose");
 const getRecipe = express.Router();
 const getCuisine = express.Router();
 const postRecipe = express.Router();
+const { authenticateToken } = require("../utils/auth");
 const Recipe = require("../models/recipe");
 const Error = require("../errors/error");
 
+
+getRecipe.route("/").get(authenticateToken, apiGetRecipes);
+postRecipe.route("/").post(authenticateToken, apiPostRecipes);
+
+getCuisine.route("/").get(apiGetRecipeCuisines);
 //************* Database Queries***************** */
 
 /**
