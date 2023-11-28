@@ -9,7 +9,7 @@ Recipe Recommender is an application that suggests you recipes based on the ingr
 
 [![Made With](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/) 
 
-[![DOI](https://zenodo.org/badge/703203979.svg)](https://zenodo.org/doi/10.5281/zenodo.10023760)
+[![DOI](https://zenodo.org/badge/703203979.svg)](https://zenodo.org/records/10212188)
 
 [![GitHub issues open](https://img.shields.io/github/issues/Yash-Chandrani/Recipe_Recommender)](https://github.com/Yash-Chandrani/Recipe_Recommender/issues?q=is%3Aopen+is%3Aissue)
 
