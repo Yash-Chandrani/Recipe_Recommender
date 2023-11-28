@@ -51,6 +51,7 @@ const Home = () => {
             TranslatedRecipeName={recipe.TranslatedRecipeName}
             imageUrl={recipe.imageUrl}
             budget={recipe.budget}
+            flag={true}
           />
         ))}
       </StyledFlexer>

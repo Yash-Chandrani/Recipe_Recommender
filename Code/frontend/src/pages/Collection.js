@@ -60,6 +60,7 @@ const SavedRecipes = () => {
             TranslatedRecipeName={recipe.TranslatedRecipeName}
             imageUrl={recipe.imageUrl}
             budget={recipe.budget}
+            flag={false}
           />
         ))}
       </StyledFlexer>

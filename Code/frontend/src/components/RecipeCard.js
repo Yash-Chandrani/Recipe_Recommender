@@ -27,7 +27,8 @@ const RecipeCard = ({
   imageUrl,
   budget,
   id,
-  user
+  user,
+  flag,
 }) => {
   const [isRecipeSaved, setIsRecipeSaved] = useState(false);
 
@@ -59,9 +60,10 @@ const RecipeCard = ({
         <StyledRecipeName>{TranslatedRecipeName}</StyledRecipeName>
       </StyledFlexer>
       <StyledFlexer>
-        <StyledSaveButton id="Save Button" onClick={handleSaveRecipe}>
-          {isRecipeSaved ? `Saved ${id} ${user}` : "Save Recipe"}
-        </StyledSaveButton>
+        
+      {flag && (<StyledSaveButton id="Save Button" onClick={handleSaveRecipe}>
+          {isRecipeSaved ? `Saved` : "Save Recipe"}
+        </StyledSaveButton>)}
         <StyledTime>{TotalTimeInMins} mins</StyledTime>
       </StyledFlexer>
       <StyledYtIFrame>

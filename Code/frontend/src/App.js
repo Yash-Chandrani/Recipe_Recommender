@@ -15,7 +15,7 @@ import {
 import login from "./pages/auth/login";
 import signup from "./pages/auth/signup";
 import Home from "./pages/home/Home";
-import SavedRecipes from "./pages/saved-recipes";
+import SavedRecipes from "./pages/Collection";
 // Main component of the project
 class App extends Component {
   // constructor for the App Component
