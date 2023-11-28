@@ -235,8 +235,20 @@ To run this project, you will need to add the following environment variables to
 
 ## Screenshots
 
+State management:<br>
 ![State Management](https://github.com/Yash-Chandrani/Recipe_Recommender/blob/main/images/State%20management.gif)
+
+Hosting video: <br>
 ![Hosting video](https://github.com/Yash-Chandrani/Recipe_Recommender/blob/main/images/hosting%20video.mp4)
+
+Confirm Password:<br>
+![Confirm Password](https://github.com/Yash-Chandrani/Recipe_Recommender/blob/main/images/confirm%20password.png)
+
+Save to personal collection:<br>
+![Save to personal collection](https://github.com/Yash-Chandrani/Recipe_Recommender/blob/main/images/save%20to%20personal%20collection.png)
+
+Saved recipes page:<br>
+![Saved recipes page](https://github.com/Yash-Chandrani/Recipe_Recommender/blob/main/images/saved%20recipes%20page.png)
 
 
 
