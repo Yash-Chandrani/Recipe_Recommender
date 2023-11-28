@@ -121,6 +121,8 @@ const addToCollection = async (req, res) => {
     console.log(req.body)
     const userId = req.body.userId;
     const recipe = req.body.recipe;
+    console.log("userId", userId)
+    console.log("recipe", recipe)
     const updatedDocument = await User.findByIdAndUpdate(
       userId,
       { $addToSet: { collection: recipe } },
@@ -128,10 +130,11 @@ const addToCollection = async (req, res) => {
     );
     if (updatedDocument) {
       console.log('Updated User colection');
+      return res.status(200).json(updatedDocument.collection);
     } else {
       console.log('User not found');
+      return res.status(404)
     }
-    return res.status(200).json(updatedDocument.collection);
   } catch (error) {
     console.error("Error adding to collection:", error);
     return res.status(500).json({ error: "Internal Server Error" , req: req});

@@ -22,7 +22,7 @@ const SavedRecipes = () => {
       console.log(err, err.message);
     });
     if (response) {
-      // console.log("Recipe ids: ",response);
+      console.log("Recipe ids: ",response);
       const resp = await recipeDB.post(`/recipes/getRecipesById`,response.data).catch((err) => {
         console.log(err, err.message);
       });

@@ -51,6 +51,8 @@ const Home = () => {
             TranslatedRecipeName={recipe.TranslatedRecipeName}
             imageUrl={recipe.imageUrl}
             budget={recipe.budget}
+            // user={localStorage.getItem(username)}
+            id={recipe._id}
             flag={true}
           />
         ))}
