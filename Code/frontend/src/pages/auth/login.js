@@ -36,7 +36,7 @@ function loginForm(props) {
     const response = await recipeDB.post("/signIn", stateTemp).catch((err) => {
       console.log(err, err.message);
     });
-  
+
     if (response && response.data.token) {
       setState((prevState) => ({
         ...prevState,
@@ -44,7 +44,9 @@ function loginForm(props) {
         failMessage: null,
       }));
       localStorage.setItem("userId", state.username);
-      document.cookie = `token=${response.data.token}; max-age=${7 * 24 * 60 * 60}`;
+      document.cookie = `token=${response.data.token}; max-age=${
+        7 * 24 * 60 * 60
+      }`;
       props.setLoginFlag(); // Corrected the function call
       props.history.push("/home");
     } else {
@@ -55,11 +57,10 @@ function loginForm(props) {
       }));
     }
   };
-  
-  
+
   return (
     <MainContainer>
-      <div id="parent" style={{ height: "100%" }} data-testid = "login_form" >
+      <div id="parent" style={{ height: "100%" }} data-testid="login_form">
         <StyledForm id="form_login">
           <div>
             <StlyedH1>SIGN IN</StlyedH1>

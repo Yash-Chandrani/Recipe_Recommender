@@ -5,7 +5,7 @@ import recipeDB from "../apis/recipeDB";
 import styled from "styled-components";
 
 const submitToApi = async (dict) => {
-  console.log("Adding recipe to user collection")
+  console.log("Adding recipe to user collection");
   const response = await recipeDB
     .post("/addToCollection", dict)
     .catch((err) => {
@@ -49,9 +49,9 @@ const RecipeCard = ({
   const handleSaveRecipe = (event) => {
     setIsRecipeSaved(!isRecipeSaved);
     // api call to save recipe in user's collection
-    console.log("Adding recipe to user collection")
+    console.log("Adding recipe to user collection");
 
-    submitToApi({"userId":user,"recipe":id})
+    submitToApi({ userId: user, recipe: id });
   };
 
   return (
@@ -60,10 +60,11 @@ const RecipeCard = ({
         <StyledRecipeName>{TranslatedRecipeName}</StyledRecipeName>
       </StyledFlexer>
       <StyledFlexer>
-        
-      {flag && (<StyledSaveButton id="Save Button" onClick={handleSaveRecipe}>
-          {isRecipeSaved ? `Saved` : "Save Recipe"}
-        </StyledSaveButton>)}
+        {flag && (
+          <StyledSaveButton id="Save Button" onClick={handleSaveRecipe}>
+            {isRecipeSaved ? `Saved` : "Save Recipe"}
+          </StyledSaveButton>
+        )}
         <StyledTime>{TotalTimeInMins} mins</StyledTime>
       </StyledFlexer>
       <StyledYtIFrame>
@@ -97,11 +98,9 @@ const RecipeCard = ({
   );
 };
 
-
-  /* <iframe width="560" height="315" src="https://www.youtube.com/embed/yDLPnEMzvYA?si=SOPPnKHgLD32DAll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+/* <iframe width="560" height="315" src="https://www.youtube.com/embed/yDLPnEMzvYA?si=SOPPnKHgLD32DAll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 https://youtu.be/yDLPnEMzvYA?feature=shared */
-
 
 export default RecipeCard;
 

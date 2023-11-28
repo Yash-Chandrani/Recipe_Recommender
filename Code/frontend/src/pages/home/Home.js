@@ -39,7 +39,10 @@ const Home = () => {
 
   return (
     <StyledCenterFlexer>
-      <StyledHeader>Recipes<AccessibleEmoji label="Smiling Face with Smiling Eyes" emoji="😊" /></StyledHeader>
+      <StyledHeader>
+        Recipes
+        <AccessibleEmoji label="Smiling Face with Smiling Eyes" emoji="😊" />
+      </StyledHeader>
       <StyledFlexer>
         {allRecipes.map((recipe) => (
           <RecipeCard

@@ -4,7 +4,6 @@ const { generateToken } = require("../utils/generateToken");
 const { authenticateToken } = require("../utils/auth");
 const Error = require("../errors/error");
 
-
 const signUpGet = async (req, res) => {
   try {
     res.status = 200;
@@ -16,7 +15,7 @@ const signUpGet = async (req, res) => {
 
 const signUpPost = async (req, res) => {
   try {
-    console.log(req.body.username)
+    console.log(req.body.username);
     const userExists = await User.findOne({ username: req.body.username });
     if (userExists) {
       throw new Error.CustomAPIError("User already exists", 409);
@@ -54,18 +53,26 @@ const signInPost = async (req, res) => {
     if (user) {
       const isPasswordValid = await user.matchPassword(req.body.password);
       debugger;
-      console.log("isPasswordValid:", isPasswordValid)
+      console.log("isPasswordValid:", isPasswordValid);
 
       if (isPasswordValid) {
         const token = await generateToken(req.body.username);
         console.log("Setting cookie with token:", token);
         const expiresIn = 60 * 60 * 24 * 7; // One week
         const expires = new Date(Date.now() + expiresIn);
-        res.cookie("token", token, {expires, });  // Set the cookie after generating the token
-        console.log("Cookie set: ",res.get( "Set-Cookie" ));
-        return res.status(200).json({ message: "You have been logged in successfully", token, username: req.body.username });
+        res.cookie("token", token, { expires }); // Set the cookie after generating the token
+        console.log("Cookie set: ", res.get("Set-Cookie"));
+        return res
+          .status(200)
+          .json({
+            message: "You have been logged in successfully",
+            token,
+            username: req.body.username,
+          });
       } else {
-        return res.status(400).json({ error: "Incorrect username or password" });
+        return res
+          .status(400)
+          .json({ error: "Incorrect username or password" });
       }
     } else {
       return res.status(400).json({ error: "Incorrect username or password" });
@@ -76,17 +83,16 @@ const signInPost = async (req, res) => {
   }
 };
 
-
-
 const signOutGet = async (req, res) => {
   try {
     res.clearCookie("token");
-    return res.status(200).json({ message: "You have been logged out successfully" });
+    return res
+      .status(200)
+      .json({ message: "You have been logged out successfully" });
   } catch (err) {
     throw new Error.CustomAPIError("Something went wrong");
   }
 };
-
 
 const userProfileGet = async (req, res) => {
   try {
@@ -104,9 +110,9 @@ const userProfileGet = async (req, res) => {
 const getCollection = async (req, res, next) => {
   try {
     const userId = req.query.userId;
-    const user = await User.findOne( { username : userId } );
+    const user = await User.findOne({ username: userId });
     if (user) {
-      return res.status(200).json({ids:user.collection});
+      return res.status(200).json({ ids: user.collection });
     } else {
       throw new Error.NotFoundError("No such user found");
     }
@@ -118,26 +124,26 @@ const getCollection = async (req, res, next) => {
 
 const addToCollection = async (req, res) => {
   try {
-    console.log(req.body)
+    console.log(req.body);
     const user = req.body.userId;
     const recipe = req.body.recipe;
-    console.log("userId", user)
-    console.log("recipe", recipe)
+    console.log("userId", user);
+    console.log("recipe", recipe);
     const updatedDocument = await User.findOneAndUpdate(
-      { username:user  },
+      { username: user },
       { $addToSet: { collection: recipe } },
-      { new: true }
+      { new: true },
     );
     if (updatedDocument) {
-      console.log('Updated User colection');
+      console.log("Updated User colection");
       return res.status(200).json(updatedDocument.collection);
     } else {
-      console.log('User not found');
-      return res.status(404)
+      console.log("User not found");
+      return res.status(404);
     }
   } catch (error) {
     console.error("Error adding to collection:", error);
-    return res.status(500).json({ error: "Internal Server Error" , req: req});
+    return res.status(500).json({ error: "Internal Server Error", req: req });
   }
 };
 
