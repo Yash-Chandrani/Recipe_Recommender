@@ -31,8 +31,10 @@ const {
   signUpRouter,
   signOutRouter,
   userProfileRouter,
+  getCollectionRouter,
+  addToCollectionRouter,
 } = require("./routes/user.js");
-const { getRecipe, getCuisine, postRecipe } = require("./routes/recipe.js");
+const { getRecipe, getCuisine, postRecipe,getRecipesById } = require("./routes/recipe.js");
 const parsingRecipeData = require("./utils/parsingRecipeData.js");
 
 app.get("/", async (req, res) => {
@@ -44,10 +46,13 @@ app.use("/api/v4/signIn", signInRouter);
 app.use("/api/v4/signUp", signUpRouter);
 app.use("/api/v4/signOut", signOutRouter);
 app.use("/api/v4/userProfile", userProfileRouter);
+app.use("/api/v4/addToCollection", addToCollectionRouter);
+app.use("/api/v4/getCollection", getCollectionRouter);
 
 app.use("/api/v4/recipes", getRecipe);
 app.use("/api/v4/recipes/cuisines", getCuisine);
 app.use("/api/v4/recipes/Addrecipes", parsingRecipeData, postRecipe);
+app.use("/api/v4/recipes/getRecipesById", getRecipesById);
 
 app.use(notFound, errorHandling);
 const PORT = process.env.PORT || 5000;

@@ -6,6 +6,7 @@ const postRecipe = express.Router();
 const { authenticateToken } = require("../utils/auth");
 const Recipe = require("../models/recipe");
 const Error = require("../errors/error");
+const { ObjectId } = mongoose.Types;
 
 
 getRecipe.route("/").get(authenticateToken, apiGetRecipes);
@@ -39,8 +40,6 @@ async function postRecipes(addRecipeDetails) {
  */
 async function getRecipes({
   filters = null,
-  page = 0,
-  recipesPerPage = 10,
 } = {}) {
   let query = {};
   console.log("Filters in getRecipes", filters);
@@ -58,17 +57,20 @@ async function getRecipes({
       query.CleanedIngredients = { $regex: str };
       console.log("the search string", str);
     }
-    for (const prop in filters) {
-      console.log(filters[prop] + "pppp" + prop + "oo");
+
+    if(filters["totalTime"]){
+      var time = parseInt(filters["totalTime"]);
+      console.log(time, filters["TotalTimeInMins"], typeof filters["totalTime"]);
+      if (time) {
+        query.TotalTimeInMins = { $lte: time };
+      }
     }
-    var time = parseInt(filters["totalTime"]);
-    console.log(time, filters["TotalTimeInMins"], typeof filters["totalTime"]);
-    var budget = parseInt(filters["budget"]);
-    if (time) {
-      query.TotalTimeInMins = { $lte: time };
-    }
-    if (budget) {
-      query.budget = { $lte: budget };
+
+    if(filters["budget"]){
+      var budget = parseInt(filters["budget"]);
+      if (budget) {
+        query.budget = { $lte: budget };
+      }
     }
     if (filters["typeOfDiet"]) {
       query.typeOfDiet = filters["typeOfDiet"];
@@ -227,8 +229,25 @@ async function apiGetRecipeCuisines(req, res, next) {
   }
 }
 
+async function apiGetRecipesById(req, res) {
+  try {
+    const ids =req.body.ids
+    // console.log("ids:", ids)
+    // console.log("type of ids:",typeof ids)
+    let objectIDs= []
+    ids.forEach(id => {
+      objectIDs.push(new ObjectId(id));
+    });
+    const recipes = await Recipe.find({ _id: { $in: objectIDs } });
+    return res.status(200).json(recipes);
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+} 
 module.exports = {
   apiGetRecipes,
   apiPostRecipes,
   apiGetRecipeCuisines,
+  apiGetRecipesById,
 };

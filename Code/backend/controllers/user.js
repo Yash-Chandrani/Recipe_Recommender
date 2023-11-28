@@ -101,6 +101,46 @@ const userProfileGet = async (req, res) => {
   }
 };
 
+const getCollection = async (req, res, next) => {
+  try {
+    const userId = req.query.userId;
+    const user = await User.findById(userId);
+    if (user) {
+      return res.status(200).json({ids:user.collection});
+    } else {
+      throw new Error.NotFoundError("No such user found");
+    }
+  } catch (error) {
+    console.error("Error getting user's collection:", error);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+const addToCollection = async (req, res) => {
+  try {
+    console.log(req.body)
+    const userId = req.body.userId;
+    const recipe = req.body.recipe;
+    console.log("userId", userId)
+    console.log("recipe", recipe)
+    const updatedDocument = await User.findByIdAndUpdate(
+      userId,
+      { $addToSet: { collection: recipe } },
+      { new: true }
+    );
+    if (updatedDocument) {
+      console.log('Updated User colection');
+      return res.status(200).json(updatedDocument.collection);
+    } else {
+      console.log('User not found');
+      return res.status(404)
+    }
+  } catch (error) {
+    console.error("Error adding to collection:", error);
+    return res.status(500).json({ error: "Internal Server Error" , req: req});
+  }
+};
+
 module.exports = {
   signInGet,
   signInPost,
@@ -108,4 +148,6 @@ module.exports = {
   signUpPost,
   signOutGet,
   userProfileGet,
+  getCollection,
+  addToCollection,
 };

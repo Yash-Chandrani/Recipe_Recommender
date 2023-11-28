@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "../pages/auth/login.css";
 
+import recipeDB from "../apis/recipeDB";
 import styled from "styled-components";
+
+const submitToApi = async (dict) => {
+  console.log("Adding recipe to user collection")
+  const response = await recipeDB
+    .post("/addToCollection", dict)
+    .catch((err) => {
+      console.log(err, err.message);
+    });
+  if (response) {
+    console.log("Added recipe to user's collection");
+  } else {
+    console.log("Failed to add recipe to user's collection");
+  }
+};
 
 const RecipeCard = ({
   CleanedIngredients,
@@ -11,7 +26,12 @@ const RecipeCard = ({
   TranslatedRecipeName,
   imageUrl,
   budget,
+  id,
+  user,
+  flag,
 }) => {
+  const [isRecipeSaved, setIsRecipeSaved] = useState(false);
+
   const fetchYTId = (url) => {
     if (url.length > 0) {
       let tmp = url.split("be/")[1];
@@ -26,10 +46,24 @@ const RecipeCard = ({
 
   const url = fetchYTId(imageUrl);
 
+  const handleSaveRecipe = (event) => {
+    setIsRecipeSaved(!isRecipeSaved);
+    // api call to save recipe in user's collection
+    console.log("Adding recipe to user collection")
+
+    submitToApi({"userId":user,"recipe":id})
+  };
+
   return (
     <StyledContainer id="form_login">
       <StyledFlexer>
         <StyledRecipeName>{TranslatedRecipeName}</StyledRecipeName>
+      </StyledFlexer>
+      <StyledFlexer>
+        
+      {flag && (<StyledSaveButton id="Save Button" onClick={handleSaveRecipe}>
+          {isRecipeSaved ? `Saved` : "Save Recipe"}
+        </StyledSaveButton>)}
         <StyledTime>{TotalTimeInMins} mins</StyledTime>
       </StyledFlexer>
       <StyledYtIFrame>
@@ -161,4 +195,18 @@ const StyledCuisine = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+`;
+
+const StyledSaveButton = styled.button`
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px;
+
+  &:hover {
+    background-color: #0d47a1;
+  }
 `;

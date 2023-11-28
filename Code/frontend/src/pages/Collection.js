@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./Home.css";
+import "./home/Home.css";
 import styled from "styled-components";
 
-import recipeDB from "../../apis/recipeDB";
-import RecipeCard from "../../components/RecipeCard";
+import recipeDB from "../apis/recipeDB";
+import RecipeCard from "../components/RecipeCard";
 
-const Home = () => {
+const SavedRecipes = () => {
   const [allRecipes, setAllRecipes] = useState([
     {
       CleanedIngredients: "tmp",
@@ -17,17 +17,26 @@ const Home = () => {
     },
   ]);
 
-  const fetchAllRecipe = async () => {
-    const response = await recipeDB.get("/recipes").catch((err) => {
+  const fetchAllRecipe = async () => { 
+    const response = await recipeDB.get(`/getCollection?userId=656513edf8075d8eea4d2017`).catch((err) => {
       console.log(err, err.message);
     });
     if (response) {
-      console.log(response.data);
-      setAllRecipes(response.data.response.recipes);
+      console.log("Recipe ids: ",response);
+      const resp = await recipeDB.post(`/recipes/getRecipesById`,response.data).catch((err) => {
+        console.log(err, err.message);
+      });
+      // console.log("Response", resp)
+      if (resp) {
+        // console.log(resp.data);
+        setAllRecipes(resp.data);
+      } else {
+        console.log("Failed to fetch recipes by id");
+      }   
     } else {
-      console.log("Failed...");
+      console.log("Failed to fetch collection of user");
     }
-  };
+  };  
 
   useEffect(() => {
     fetchAllRecipe();
@@ -39,7 +48,7 @@ const Home = () => {
 
   return (
     <StyledCenterFlexer>
-      <StyledHeader>Recipes<AccessibleEmoji label="Smiling Face with Smiling Eyes" emoji="😊" /></StyledHeader>
+      <StyledHeader>Saved Recipes<AccessibleEmoji label="red heart" emoji="❤️" /></StyledHeader>
       <StyledFlexer>
         {allRecipes.map((recipe) => (
           <RecipeCard
@@ -51,9 +60,7 @@ const Home = () => {
             TranslatedRecipeName={recipe.TranslatedRecipeName}
             imageUrl={recipe.imageUrl}
             budget={recipe.budget}
-            // user={localStorage.getItem(username)}
-            id={recipe._id}
-            flag={true}
+            flag={false}
           />
         ))}
       </StyledFlexer>
@@ -61,7 +68,7 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default SavedRecipes;
 
 const StyledHeader = styled.div`
   font-size: 32px;

@@ -15,6 +15,7 @@ import {
 import Login from "./pages/auth/login";
 import signup from "./pages/auth/signup";
 import Home from "./pages/home/Home";
+import SavedRecipes from "./pages/Collection";
 import Signup from "./pages/auth/signup";
 // Main component of the project
 class App extends Component {
@@ -179,6 +180,10 @@ class App extends Component {
           <Route path="/home">
             <Header loginFlag={this.state.loginFlag} />
             <Home />
+          </Route>
+          <Route path="/saved-recipes">
+            <Header loginFlag={this.state.loginFlag} />
+            <SavedRecipes />
           </Route>
           <Redirect exact from="/" to="login" />
         </Switch>
