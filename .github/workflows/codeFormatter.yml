@@ -1,9 +1,9 @@
 name: Check the source code
 on:
   pull_request:
-    branches: ["master"]
+    branches: ["main"]
   push:
-    branches: ["master"]
+    branches: ["main"]
 jobs:
   test:
     name: Check the source code
