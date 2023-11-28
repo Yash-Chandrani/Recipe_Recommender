@@ -39,7 +39,8 @@ Recipe Recommender is an application that suggests you recipes based on the ingr
 
 ## Demo
 
-Insert gif or link to demo
+[![Watch the video]](https://youtu.be/tkT-axzLmrE)
+
 
 
 ## Tech Stack
