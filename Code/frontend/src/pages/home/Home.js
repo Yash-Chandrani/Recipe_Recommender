@@ -39,7 +39,10 @@ const Home = () => {
 
   return (
     <StyledCenterFlexer>
-      <StyledHeader>Recipes<AccessibleEmoji label="Smiling Face with Smiling Eyes" emoji="😊" /></StyledHeader>
+      <StyledHeader>
+        Recipes
+        <AccessibleEmoji label="Smiling Face with Smiling Eyes" emoji="😊" />
+      </StyledHeader>
       <StyledFlexer>
         {allRecipes.map((recipe) => (
           <RecipeCard
@@ -51,7 +54,7 @@ const Home = () => {
             TranslatedRecipeName={recipe.TranslatedRecipeName}
             imageUrl={recipe.imageUrl}
             budget={recipe.budget}
-            // user={localStorage.getItem(username)}
+            user={localStorage.getItem("userId")}
             id={recipe._id}
             flag={true}
           />

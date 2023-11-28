@@ -117,7 +117,7 @@ class App extends Component {
       loginId: localStorage.getItem("login_recipe_recommender"),
       recipeList: [],
     });
-  }
+  };
 
   render() {
     return (

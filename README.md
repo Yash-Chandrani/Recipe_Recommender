@@ -1,13 +1,12 @@
-
 # Recipe Recommender
 
 Recipe Recommender is an application that suggests you recipes based on the ingredients which are currently available. One of the most tedious tasks while cooking is figuring out what to cook with the ingredients that you, have rather than how to cook it. Our software aims to ease this dilemma by providing recipes for food items which you can make with the ingredients at your home.
 
-
 ![RECIPE RECOMMENDER](https://user-images.githubusercontent.com/40118578/139968487-1150b64e-d8d3-4f2e-a5d3-9a48d19ff64b.gif)
+
 ## Badges
 
-[![Made With](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/) 
+[![Made With](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
 
 [![DOI](https://zenodo.org/badge/703203979.svg)](https://zenodo.org/records/10212188)
 
@@ -41,7 +40,6 @@ Recipe Recommender is an application that suggests you recipes based on the ingr
 
 Insert gif or link to demo
 
-
 ## Tech Stack
 
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
@@ -53,12 +51,9 @@ Insert gif or link to demo
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
 
 ## Documentation
 
@@ -69,30 +64,21 @@ Recipe Recommender is a website that suggests users simple food recipes based on
 - [ ] For each recipe, we show the key ingredients, instructions and a sample image.
 - [ ] Upon user request we also send the list of recipes to the user.
 
-
-  
-
 ## **Installation Instructions for Libraries and MongoDB**
-
-  
 
 1. Install Node.js:
 
 Download and install the latest LTS (Long-Term Support) version of Node.js from the official website: https://node.js.org/en/download/
 
-  
-
 2. Install Git:
 
-Git is a version control system that is used to track changes in code. You can download and install Git from the official website: https://git-scm.com/  
+Git is a version control system that is used to track changes in code. You can download and install Git from the official website: https://git-scm.com/
 
 **Installing MongoDB Community Edition**
 
 1. Download the MongoDB Installer:
 
 Download the MongoDB Community Edition installer for your operating system from the official MongoDB website: https://www.mongodb.com/try/download/community
-
-  
 
 2. Install MongoDB:
 
@@ -109,8 +95,8 @@ Clone the project
 ```bash
   git clone https://github.com/Yash-Chandrani/Recipe_Recommender
 ```
-Make sure you have all the required environment variables by going to [Environment Variables section ](https://github.com/Yash-Chandrani/Recipe_Recommender)
 
+Make sure you have all the required environment variables by going to [Environment Variables section ](https://github.com/Yash-Chandrani/Recipe_Recommender)
 
 Go to the backend directory by
 
@@ -148,11 +134,9 @@ Start the frontend by navigating to the frontend directory and run the command g
   npm start
 ```
 
-
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file inside your backend folder
-
 
 `RECIPES_DB_URI` Your Mongo DB URI
 
@@ -162,51 +146,49 @@ To run this project, you will need to add the following environment variables to
 
 `JWT_SECRET` Your JWT secret token for auth
 
-
-  
-
 ## API Reference
-
-  
 
 #### Sign in
 
-| Path           | Method | Body                                                                     |
-|----------------|--------|--------------------------------------------------------------------------|
-| /api/v4/signIn | POST   | {    "username":"INSERT USERNAME",     "password": "INSERT PASSWORD" } |
+| Path           | Method | Body                                                            |
+| -------------- | ------ | --------------------------------------------------------------- |
+| /api/v4/signIn | POST   | { "username":"INSERT USERNAME", "password": "INSERT PASSWORD" } |
 
 #### Sign up
 
-| Path           | Method | Body                                                                     |
-|----------------|--------|--------------------------------------------------------------------------|
-| /api/v4/signUp | POST   | {    "username":"{INSERT USERNAME}",     "password": "INSERT PASSWORD" } |
+| Path           | Method | Body                                                              |
+| -------------- | ------ | ----------------------------------------------------------------- |
+| /api/v4/signUp | POST   | { "username":"{INSERT USERNAME}", "password": "INSERT PASSWORD" } |
 
 #### Sign out
 
 | Path            | Method |
-|-----------------|--------|
+| --------------- | ------ |
 | /api/v4/signOut | GET    |
 
-
 #### User Profile
-| Path                | Method | Body                                                                   |
-|---------------------|--------|------------------------------------------------------------------------|
-| /api/v4/userProfile | GET    | {     "username":"INSERT USERNAME",     "password":"INSERT PASSWORD" } |
- 
+
+| Path                | Method | Body                                                           |
+| ------------------- | ------ | -------------------------------------------------------------- |
+| /api/v4/userProfile | GET    | { "username":"INSERT USERNAME", "password":"INSERT PASSWORD" } |
+
 #### Get recipes
+
 | Path            | Method |
-|-----------------|--------|
-| /api/v4/recipes | GET    | 
+| --------------- | ------ |
+| /api/v4/recipes | GET    |
 
 #### Get cuisines
+
 | Path                     | Method |
-|--------------------------|--------|
+| ------------------------ | ------ |
 | /api/v4/recipes/cuisines | GET    |
 
 #### Add recipes
-| Path                       | Method | Body                                                                                                                                                                                                                                                     |
-|----------------------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /api/v4/recipes/Addrecipes | POST   | {         "recipe_name": "RECIPE_NAME",         "recipe_ingredients": "INGREDIENTS",         "recipe_cuisine": "CUISINE",         "recipe_time": "TIME IN NUMBERS",         "recipe_url" : "RECIPE LINK",         "recipe_instructions":"INSTRUCTIONS" } |
+
+| Path                       | Method | Body                                                                                                                                                                                                     |
+| -------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| /api/v4/recipes/Addrecipes | POST   | { "recipe_name": "RECIPE_NAME", "recipe_ingredients": "INGREDIENTS", "recipe_cuisine": "CUISINE", "recipe_time": "TIME IN NUMBERS", "recipe_url" : "RECIPE LINK", "recipe_instructions":"INSTRUCTIONS" } |
 
 ## Features
 
@@ -216,7 +198,6 @@ To run this project, you will need to add the following environment variables to
 - Responsive UI
 - Add recipes to your personal collection
 - Get inspired by other users' added recipes
-
 
 ## What's NEW
 
@@ -228,10 +209,6 @@ To run this project, you will need to add the following environment variables to
 - Added tests for frontend
 - Allowing users to have their own personal collection of recipes
 - Bug fixes
-
-
-
-
 
 ## Screenshots
 
@@ -253,7 +230,6 @@ Saved recipes page:<br>
 
 
 
-
 ## Running Tests
 
 To run tests, run the following command in the backend and frontend folders of the application
@@ -264,17 +240,16 @@ To run tests, run the following command in the backend and frontend folders of t
 
 ## Deployment
 
-  
-
 We have deployed this application using [Render](https://render.com/). Find the deployment link below:
-
 
 https://reciepe-recommender-frontend.onrender.com/
 
 P.S: It is possible that the application does not open since we are using the free tier of render and the server may go to sleep due to inactivity.
+
 ## Roadmap
 
 ### Phase 5
+
 - [x] Restructured the frontend code for improved cleanliness and efficiency.
 - [x] Implemented adding recipes personal collection functionality from both all recipes, and through add recipes from scratch.
 - [x] Fixed authorization and authentication system with JSON web tokens.
@@ -288,12 +263,11 @@ P.S: It is possible that the application does not open since we are using the fr
 
 ## Future scope
 
-- [ ]  Recommend restaurants along with recipes
-- [ ]  GPT based recommendations
-- [ ]  Making the application Cross platorm with React Native 
-## Authors
+- [ ] Recommend restaurants along with recipes
+- [ ] GPT based recommendations
+- [ ] Making the application Cross platorm with React Native
 
-  
+## Authors
 
 <table>
 
@@ -315,13 +289,11 @@ P.S: It is possible that the application does not open since we are using the fr
 
 For support, email ychandr@ncsu.edu
 
-
 ## Contributing
 
 Contributions are always welcome!
 
 See [CONTRIBUTING.md](https://github.com/Yash-Chandrani/Recipe_Recommender/blob/main/CONTRIBUTING.md) for ways to get started.
-
 
 ## Feedback
 

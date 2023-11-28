@@ -8,7 +8,6 @@ const Recipe = require("../models/recipe");
 const Error = require("../errors/error");
 const { ObjectId } = mongoose.Types;
 
-
 getRecipe.route("/").get(authenticateToken, apiGetRecipes);
 postRecipe.route("/").post(authenticateToken, apiPostRecipes);
 
@@ -38,9 +37,7 @@ async function postRecipes(addRecipeDetails) {
  * @param {Number} recipesPerPage - Limits the number of results in a api response *Not Implemented*.
  * @return {Object} Returns { recipesList: [Array], totalNumRecipes: Number }
  */
-async function getRecipes({
-  filters = null,
-} = {}) {
+async function getRecipes({ filters = null } = {}) {
   let query = {};
   console.log("Filters in getRecipes", filters);
   if (filters) {
@@ -58,15 +55,19 @@ async function getRecipes({
       console.log("the search string", str);
     }
 
-    if(filters["totalTime"]){
+    if (filters["totalTime"]) {
       var time = parseInt(filters["totalTime"]);
-      console.log(time, filters["TotalTimeInMins"], typeof filters["totalTime"]);
+      console.log(
+        time,
+        filters["TotalTimeInMins"],
+        typeof filters["totalTime"],
+      );
       if (time) {
         query.TotalTimeInMins = { $lte: time };
       }
     }
 
-    if(filters["budget"]){
+    if (filters["budget"]) {
       var budget = parseInt(filters["budget"]);
       if (budget) {
         query.budget = { $lte: budget };
@@ -231,20 +232,21 @@ async function apiGetRecipeCuisines(req, res, next) {
 
 async function apiGetRecipesById(req, res) {
   try {
-    const ids =req.body.ids
-    // console.log("ids:", ids)
-    // console.log("type of ids:",typeof ids)
-    let objectIDs= []
-    ids.forEach(id => {
-      objectIDs.push(new ObjectId(id));
-    });
-    const recipes = await Recipe.find({ _id: { $in: objectIDs } });
-    return res.status(200).json(recipes);
+    const ids = req.body.ids;
+    let objectIDs = [];
+    if (ids.length > 0) {
+      ids.forEach((id) => {
+        objectIDs.push(new ObjectId(id));
+      });
+      const recipes = await Recipe.find({ _id: { $in: objectIDs } });
+      return res.status(200).json(recipes);
+    }
+    return res.status(200);
   } catch (e) {
     console.log(e);
     return res.status(500).json({ error: "Internal Server Error" });
   }
-} 
+}
 module.exports = {
   apiGetRecipes,
   apiPostRecipes,

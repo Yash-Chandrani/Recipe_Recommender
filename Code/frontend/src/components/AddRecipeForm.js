@@ -93,9 +93,7 @@ class Form extends Component {
 
   // render function dispays the UI content i.e the form content
   render() {
-    
-      console.log("AddRecipeForm Render Function");
-    
+    console.log("AddRecipeForm Render Function");
 
     // returns jsx element
     return (

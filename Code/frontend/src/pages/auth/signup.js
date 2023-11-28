@@ -33,18 +33,20 @@ function signupForm(props) {
     const stateTemp = {
       username: state.username,
       password: state.password,
-      c_password: state.c_password
+      c_password: state.c_password,
     };
-    if(state.password !== state.c_password){
+    if (state.password !== state.c_password) {
       setState((prevState) => ({
         ...prevState,
         failMessage: "Passswords do not match. Please try again.",
         successMessage: null,
       }));
-    }else{
-      const response = await recipeDB.post("/signUp", stateTemp).catch((err) => {
-        console.log(err, err.message);
-      });
+    } else {
+      const response = await recipeDB
+        .post("/signUp", stateTemp)
+        .catch((err) => {
+          console.log(err, err.message);
+        });
       if (response) {
         setState((prevState) => ({
           ...prevState,
@@ -62,12 +64,10 @@ function signupForm(props) {
         }));
       }
     }
-    
   };
 
   return (
     <MainContainer>
-      
       <div id="parent" style={{ height: "100%" }}>
         <StyledForm id="form_login">
           <div>
@@ -86,21 +86,21 @@ function signupForm(props) {
           </div>
           <div class="clear">
             <div class="signupLable">
-              <label  style={{ maxWidth: "250px" }}>Password</label>
+              <label style={{ maxWidth: "250px" }}>Password</label>
             </div>
             <div class="signupInput">
-            <input
-              type="password"
-              id="password"
-              value={state.password}
-              onChange={changeValue}
-            />
+              <input
+                type="password"
+                id="password"
+                value={state.password}
+                onChange={changeValue}
+              />
             </div>
           </div>
           <div class="clear">
             <div class="signupLable">
-              <label  style={{ maxWidth: "250px" }}>Confirm Password</label>
-            </div>            
+              <label style={{ maxWidth: "250px" }}>Confirm Password</label>
+            </div>
             <div class="signupInput">
               <input
                 type="password"
@@ -109,7 +109,6 @@ function signupForm(props) {
                 onChange={changeValue}
               />
             </div>
-            
           </div>
           <br />
           <button
