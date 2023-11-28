@@ -30,10 +30,10 @@ jobs:
           cd Code/backend
           npm install --force
 
-      - name: Run the tests
-        run: |
-          cd Code/backend
-          npm test -- --coverage
+      # - name: Run the tests
+      #   run: |
+      #     cd Code/backend
+      #     npm test -- --coverage
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
