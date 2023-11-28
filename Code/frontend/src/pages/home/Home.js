@@ -51,7 +51,7 @@ const Home = () => {
             TranslatedRecipeName={recipe.TranslatedRecipeName}
             imageUrl={recipe.imageUrl}
             budget={recipe.budget}
-            // user={localStorage.getItem(username)}
+            user={localStorage.getItem("userId")}
             id={recipe._id}
             flag={true}
           />

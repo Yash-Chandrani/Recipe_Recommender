@@ -104,7 +104,7 @@ const userProfileGet = async (req, res) => {
 const getCollection = async (req, res, next) => {
   try {
     const userId = req.query.userId;
-    const user = await User.findById(userId);
+    const user = await User.findOne( { username : userId } );
     if (user) {
       return res.status(200).json({ids:user.collection});
     } else {
@@ -119,12 +119,12 @@ const getCollection = async (req, res, next) => {
 const addToCollection = async (req, res) => {
   try {
     console.log(req.body)
-    const userId = req.body.userId;
+    const user = req.body.userId;
     const recipe = req.body.recipe;
-    console.log("userId", userId)
+    console.log("userId", user)
     console.log("recipe", recipe)
-    const updatedDocument = await User.findByIdAndUpdate(
-      userId,
+    const updatedDocument = await User.findOneAndUpdate(
+      { username:user  },
       { $addToSet: { collection: recipe } },
       { new: true }
     );

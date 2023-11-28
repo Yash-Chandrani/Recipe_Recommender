@@ -232,14 +232,15 @@ async function apiGetRecipeCuisines(req, res, next) {
 async function apiGetRecipesById(req, res) {
   try {
     const ids =req.body.ids
-    // console.log("ids:", ids)
-    // console.log("type of ids:",typeof ids)
     let objectIDs= []
-    ids.forEach(id => {
-      objectIDs.push(new ObjectId(id));
-    });
-    const recipes = await Recipe.find({ _id: { $in: objectIDs } });
-    return res.status(200).json(recipes);
+    if (ids.length > 0){
+      ids.forEach(id => {
+        objectIDs.push(new ObjectId(id));
+      });
+      const recipes = await Recipe.find({ _id: { $in: objectIDs } });
+      return res.status(200).json(recipes);
+    }
+    return res.status(200)
   } catch (e) {
     console.log(e);
     return res.status(500).json({ error: "Internal Server Error" });

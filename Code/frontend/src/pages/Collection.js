@@ -18,7 +18,7 @@ const SavedRecipes = () => {
   ]);
 
   const fetchAllRecipe = async () => { 
-    const response = await recipeDB.get(`/getCollection?userId=656513edf8075d8eea4d2017`).catch((err) => {
+    const response = await recipeDB.get(`/getCollection?userId=${localStorage.getItem("userId")}`).catch((err) => {
       console.log(err, err.message);
     });
     if (response) {

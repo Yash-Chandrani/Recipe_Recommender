@@ -43,7 +43,7 @@ function loginForm(props) {
         successMessage: "Login successful. Redirecting to home page..",
         failMessage: null,
       }));
-      localStorage.setItem("login_recipe_recommender", state.username);
+      localStorage.setItem("userId", state.username);
       document.cookie = `token=${response.data.token}; max-age=${7 * 24 * 60 * 60}`;
       props.setLoginFlag(); // Corrected the function call
       props.history.push("/home");
