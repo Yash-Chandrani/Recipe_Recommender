@@ -297,16 +297,17 @@ li.recipe_ingredient_item {
   transition: transform 0.5s ease;
 }
 
-li.recipe_ingredient_item: hover {
+li.recipe_ingredient_item:hover {
   transform: scale(1.1);
 }
 
-ul.result_instructions {
+/*ul.result_instructions {
+
 }
 
-/* Styling for the individial list items in recipe ingredient list*/
-li.translated_instruction_item {
-}
+Styling for the individial list items in recipe ingredient list*/
+/*li.translated_instruction_item {
+}*/
 
 .navbar-ul {
   list-style-type: none;

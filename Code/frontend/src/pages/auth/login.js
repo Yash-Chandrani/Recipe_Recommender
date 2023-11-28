@@ -56,10 +56,10 @@ function loginForm(props) {
     }
   };
   
-
+  
   return (
     <MainContainer>
-      <div id="parent" style={{ height: "100%" }}>
+      <div id="parent" style={{ height: "100%" }} data-testid = "login_form" >
         <StyledForm id="form_login">
           <div>
             <StlyedH1>SIGN IN</StlyedH1>
