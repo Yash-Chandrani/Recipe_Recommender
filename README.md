@@ -11,25 +11,25 @@ Recipe Recommender is an application that suggests you recipes based on the ingr
 
 [![DOI](https://zenodo.org/badge/703203979.svg)](https://zenodo.org/doi/10.5281/zenodo.10023760)
 
-[![GitHub issues open](https://img.shields.io/github/issues/Shubh-Nisar/Recipe_Recommender)](https://github.com/Yash-Chandrani/Recipe_Recommender/issues?q=is%3Aopen+is%3Aissue)
+[![GitHub issues open](https://img.shields.io/github/issues/Yash-Chandrani/Recipe_Recommender)](https://github.com/Yash-Chandrani/Recipe_Recommender/issues?q=is%3Aopen+is%3Aissue)
 
-[![GitHub stars](https://badgen.net/github/stars/Yash-Chandrani/Recipe_Recommender)](https://badgen.net/github/stars/Shubh-Nisar/Recipe_Recommender)
+[![GitHub stars](https://badgen.net/github/stars/Yash-Chandrani/Recipe_Recommender)](https://badgen.net/github/stars/Yash-Chandrani/Recipe_Recommender)
 
-![Github closes issues](https://img.shields.io/github/issues-closed-raw/Shubh-Nisar/Recipe_Recommender)
+![Github closes issues](https://img.shields.io/github/issues-closed-raw/Yash-Chandrani/Recipe_Recommender)
 
-[![Build Status](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/coverage.yml)
+[![Build Status](https://github.com/Yash-Chandrani/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/Yash-Chandrani/Recipe_Recommender/actions/workflows/coverage.yml)
 
 [![codecov](https://codecov.io/gh/thosaniparth/Recipe_Recommender/branch/master/graph/badge.svg?token=M48I2E3PLL)](https://codecov.io/gh/thosaniparth/Recipe_Recommender)
 
-[![Respost - Write comment to new Issue event](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Respost.yml)
+[![Respost - Write comment to new Issue event](https://github.com/Yash-Chandrani/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/Yash-Chandrani/Recipe_Recommender/actions/workflows/Respost.yml)
 
-[![Check the source code](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/codeFormatter.yml)
+[![Check the source code](https://github.com/Yash-Chandrani/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/Yash-Chandrani/Recipe_Recommender/actions/workflows/codeFormatter.yml)
 
-![GitHub contributors](https://img.shields.io/github/contributors/Shubh-Nisar/Recipe_Recommender)
+![GitHub contributors](https://img.shields.io/github/contributors/Yash-Chandrani/Recipe_Recommender)
 
-[![Code Formatter and Syntax Check](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
+[![Code Formatter and Syntax Check](https://github.com/Yash-Chandrani/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/Yash-Chandrani/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
 
-[![Style Checker and Prettify Code](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
+[![Style Checker and Prettify Code](https://github.com/Yash-Chandrani/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/Yash-Chandrani/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
 
 [![Greetings](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/greetings.yml/badge.svg)](https://github.com/Shubh-Nisar/Recipe_Recommender/actions/workflows/greetings.yml)
 
