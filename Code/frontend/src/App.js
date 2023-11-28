@@ -12,10 +12,11 @@ import {
   BrowserRouter as Router,
   Switch,
 } from "react-router-dom";
-import login from "./pages/auth/login";
+import Login from "./pages/auth/login";
 import signup from "./pages/auth/signup";
 import Home from "./pages/home/Home";
 import SavedRecipes from "./pages/Collection";
+import Signup from "./pages/auth/signup";
 // Main component of the project
 class App extends Component {
   // constructor for the App Component
@@ -30,10 +31,10 @@ class App extends Component {
       cuisineList: [],
       email: "",
       flag: false,
-      loginFlag: sessionStorage.getItem("login_recipe_recommender")
+      loginFlag: localStorage.getItem("login_recipe_recommender")
         ? true
         : false,
-      loginId: sessionStorage.getItem("login_recipe_recommender"),
+      loginId: localStorage.getItem("login_recipe_recommender"),
       cooking_time: "",
     };
     this.setLoginFlag.bind(this);
@@ -110,10 +111,10 @@ class App extends Component {
   setLoginFlag = () => {
     console.log("set login flag");
     this.setState({
-      loginFlag: sessionStorage.getItem("login_recipe_recommender")
+      loginFlag: localStorage.getItem("login_recipe_recommender")
         ? true
         : false,
-      loginId: sessionStorage.getItem("login_recipe_recommender"),
+      loginId: localStorage.getItem("login_recipe_recommender"),
       recipeList: [],
     });
   }
@@ -127,15 +128,19 @@ class App extends Component {
           <Route
             exact
             path="/login"
-            component={login}
-            setLoginFlag={this.setLoginFlag}
+            // component={login}
+            render={(props) => (
+              <Login {...props} setLoginFlag={this.setLoginFlag} />
+            )}
           />
 
           <Route
             exact
             path="/sign-up"
-            component={signup}
-            setLoginFlag={this.setLoginFlag}
+            // component={signup}
+            render={(props) => (
+              <Signup {...props} setLoginFlag={this.setLoginFlag} />
+            )}
           />
 
           <Route path="/add-recipe">

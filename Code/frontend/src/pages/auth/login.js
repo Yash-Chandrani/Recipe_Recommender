@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom";
 
 function loginForm(props) {
   const history = useHistory();
-  if (sessionStorage.getItem("login_recipe_recommender")) {
+  if (localStorage.getItem("login_recipe_recommender")) {
     props.history.push("/home");
   }
 
@@ -36,14 +36,16 @@ function loginForm(props) {
     const response = await recipeDB.post("/signIn", stateTemp).catch((err) => {
       console.log(err, err.message);
     });
-    if (response) {
+  
+    if (response && response.data.token) {
       setState((prevState) => ({
         ...prevState,
         successMessage: "Login successful. Redirecting to home page..",
         failMessage: null,
       }));
-      sessionStorage.setItem("login_recipe_recommender", state.username);
-      props.setLoginFlag;
+      localStorage.setItem("login_recipe_recommender", state.username);
+      document.cookie = `token=${response.data.token}; max-age=${7 * 24 * 60 * 60}`;
+      props.setLoginFlag(); // Corrected the function call
       props.history.push("/home");
     } else {
       setState((prevState) => ({
@@ -53,10 +55,11 @@ function loginForm(props) {
       }));
     }
   };
-
+  
+  
   return (
     <MainContainer>
-      <div id="parent" style={{ height: "100%" }}>
+      <div id="parent" style={{ height: "100%" }} data-testid = "login_form" >
         <StyledForm id="form_login">
           <div>
             <StlyedH1>SIGN IN</StlyedH1>

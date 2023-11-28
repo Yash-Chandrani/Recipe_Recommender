@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 function Header() {
   const history = useHistory();
 
-  if (!sessionStorage.getItem("login_recipe_recommender")) {
+  if (!localStorage.getItem("login_recipe_recommender")) {
     history.push("/login");
   }
 
@@ -22,7 +22,7 @@ function Header() {
         <li
           className="navbar-li navbar-li-right"
           onClick={() => {
-            sessionStorage.removeItem("login_recipe_recommender");
+            localStorage.removeItem("login_recipe_recommender");
             history.push("/login");
           }}
           style={{ cursor: "pointer" }}

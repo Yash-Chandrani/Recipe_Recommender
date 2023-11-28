@@ -1,4 +1,5 @@
 const express = require("express");
+const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
 const app = express();
@@ -12,12 +13,14 @@ const cors = require("cors");
 app.use(express.json());
 
 dotenv.config();
-
+console.log("JWT_SECRET in app.js:", process.env.JWT_SECRET);
 connectDB();
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(cors({ credentials: true }));
-app.use(cors());
+app.use(cookieParser());
+
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
