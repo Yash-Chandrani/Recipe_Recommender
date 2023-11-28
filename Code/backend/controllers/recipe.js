@@ -5,6 +5,7 @@ const getCuisine = express.Router();
 const postRecipe = express.Router();
 const Recipe = require("../models/recipe");
 const Error = require("../errors/error");
+const { ObjectId } = mongoose.Types;
 
 //************* Database Queries***************** */
 
@@ -222,8 +223,25 @@ async function apiGetRecipeCuisines(req, res, next) {
   }
 }
 
+async function apiGetRecipesById(req, res) {
+  try {
+    const ids =req.body.ids
+    // console.log("ids:", ids)
+    // console.log("type of ids:",typeof ids)
+    let objectIDs= []
+    ids.forEach(id => {
+      objectIDs.push(new ObjectId(id));
+    });
+    const recipes = await Recipe.find({ _id: { $in: objectIDs } });
+    return res.status(200).json(recipes);
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+} 
 module.exports = {
   apiGetRecipes,
   apiPostRecipes,
   apiGetRecipeCuisines,
+  apiGetRecipesById,
 };
