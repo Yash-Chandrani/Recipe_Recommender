@@ -1,28 +1,32 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
 import React from "react";
+import 'jest-localstorage-mock';
+import { MemoryRouter } from 'react-router-dom';
+import Signup from "./pages/auth/signup";
 
 
-test("renders Recipe link", () => {
-  render(<App />);
-  const linkElement = screen.queryByText(/Recipe/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('Testing for the App components ... ', () => {
+  it('login form testing ...', ()=> {
+    const renderData = render(<App />);
 
-test("renders Recommender link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Recommender/i);
-  expect(linkElement).toBeInTheDocument();
-});
+    const linkElement2 = renderData.getByTestId(/login_form/)
+    expect(linkElement2).toHaveTextContent('SIGN IN')
+    expect(linkElement2).toHaveTextContent('Username')
+    expect(linkElement2).toHaveTextContent('Password')
+    expect(linkElement2).toHaveTextContent('Submit')
 
-test("renders Email link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Email/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
-test("renders Ingredient link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Ingredient/i);
-  expect(linkElement).toBeInTheDocument();
-});
+  })
+  it('Signup form testing ...', ()=> {
+    const renderData = render(<MemoryRouter>
+      <Signup setLoginFlag={() => {}} />
+    </MemoryRouter>);
+    const linkElement1 = renderData.getByTestId(/signup_form/)
+    expect(linkElement1).toHaveTextContent('SIGN UP')
+    expect(linkElement1).toHaveTextContent('Username')
+    expect(linkElement1).toHaveTextContent('Password')
+    expect(linkElement1).toHaveTextContent('Confirm Password')
+    expect(linkElement1).toHaveTextContent('Submit')
+ 
+  })
+})
