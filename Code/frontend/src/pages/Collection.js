@@ -17,17 +17,26 @@ const SavedRecipes = () => {
     },
   ]);
 
-  const fetchAllRecipe = async () => {
-    const response = await recipeDB.get("/recipes").catch((err) => {
+  const fetchAllRecipe = async () => { 
+    const response = await recipeDB.get(`/getCollection?userId=656513edf8075d8eea4d2017`).catch((err) => {
       console.log(err, err.message);
     });
     if (response) {
-      console.log(response.data);
-      setAllRecipes(response.data.response.recipes);
+      // console.log("Recipe ids: ",response);
+      const resp = await recipeDB.post(`/recipes/getRecipesById`,response.data).catch((err) => {
+        console.log(err, err.message);
+      });
+      // console.log("Response", resp)
+      if (resp) {
+        // console.log(resp.data);
+        setAllRecipes(resp.data);
+      } else {
+        console.log("Failed to fetch recipes by id");
+      }   
     } else {
-      console.log("Failed...");
+      console.log("Failed to fetch collection of user");
     }
-  };
+  };  
 
   useEffect(() => {
     fetchAllRecipe();
