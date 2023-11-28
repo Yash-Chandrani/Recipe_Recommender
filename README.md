@@ -239,6 +239,7 @@ State management:<br>
 ![State Management](https://github.com/Yash-Chandrani/Recipe_Recommender/blob/main/images/State%20management.gif)
 
 Hosting video: <br>
+
 ![Hosting video](https://github.com/Yash-Chandrani/Recipe_Recommender/blob/main/images/hosting%20video.mp4)
 
 Confirm Password:<br>
