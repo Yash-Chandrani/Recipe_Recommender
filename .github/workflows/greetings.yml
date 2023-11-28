@@ -2,9 +2,9 @@ name: Greetings
 
 on:
   pull_request:
-    branches: ["master"]
+    branches: ["main"]
   issues:
-    branches: ["master"]
+    branches: ["main"]
 
 jobs:
   greeting:
