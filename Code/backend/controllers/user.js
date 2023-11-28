@@ -95,7 +95,7 @@ const getCollection = async (req, res, next) => {
     const userId = req.query.userId;
     const user = await User.findById(userId);
     if (user) {
-      return res.status(200).json(user.collection);
+      return res.status(200).json({ids:user.collection});
     } else {
       throw new Error.NotFoundError("No such user found");
     }
